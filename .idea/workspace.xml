@@ -2,171 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/big-yii2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Vagrantfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/assets/AppAsset.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/codeception.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/params.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/config/test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/models/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/runtime/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_data/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_data/login_data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_output/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_support/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_support/FunctionalTester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/_support/UnitTester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/functional.suite.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/functional/LoginCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/functional/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/unit.suite.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/tests/unit/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/site/error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/site/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/views/site/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/assets/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/css/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/web/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codeception.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/codeception.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/config/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/config/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/config/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/config/params.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/config/test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/fixtures/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/mail/layouts/html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/mail/layouts/text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/mail/passwordResetToken-html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/mail/passwordResetToken-text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/LoginForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/models/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/_data/user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/_output/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/_support/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/_support/UnitTester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/unit.suite.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/tests/unit/models/LoginFormTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/widgets/Alert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/config/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/config/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/config/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/config/params.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/controllers/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/models/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/runtime/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/backend/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/backend/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/backend/config/test-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/backend/web/index-test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/backend/web/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/common/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/common/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/common/config/test-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/console/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/console/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/test-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/frontend/web/index-test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/frontend/web/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/yii" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/yii_test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/dev/yii_test.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/backend/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/backend/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/backend/web/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/common/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/common/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/console/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/console/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/frontend/config/main-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/frontend/config/params-local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/frontend/web/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environments/prod/yii" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/assets/AppAsset.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/codeception.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/config/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/config/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/config/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/config/params.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/config/test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/ContactForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/SignupForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/runtime/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_data/login_data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_data/user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_output/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_support/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_support/FunctionalTester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/_support/UnitTester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/acceptance.suite.yml.example" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/acceptance/HomeCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/acceptance/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional.suite.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/AboutCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/ContactCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/HomeCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/LoginCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/functional/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit.suite.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit/_bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/ContactFormTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/PasswordResetRequestFormTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/ResetPasswordFormTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/SignupFormTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/about.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/requestPasswordResetToken.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/resetPassword.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/site/signup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/assets/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/css/site.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/init" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/init.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/config/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/nginx/app.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/nginx/log/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/provision/always-as-root.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/provision/once-as-root.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vagrant/provision/once-as-vagrant.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yii.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -183,7 +21,15 @@
     <leaf />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jiaecai &lt;jiaecai@qq.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="develop" />
+    </push-targets>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -305,12 +151,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489577391145</updated>
-      <workItem from="1489577393194" duration="171000" />
+      <workItem from="1489577393194" duration="975000" />
     </task>
+    <task id="LOCAL-00001" summary="fir update yii2">
+      <created>1489577617507</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1489577617507</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171000" />
+    <option name="totallyTimeSpent" value="975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -343,6 +197,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fir update yii2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fir update yii2" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -352,6 +210,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding />
         </state>
       </provider>
