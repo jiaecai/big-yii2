@@ -84,7 +84,7 @@ class WxController extends Controller
      * 服务器验证
      */
     public function actionServVali(){
-        $app = new Application(Yii::$app->params['wxOptions']);
+        $app = new Application(Yii::$app->params['WECHAT']);
 
         /*
         $server = $app->server;
@@ -104,6 +104,17 @@ class WxController extends Controller
         $response = $app->server->serve();//执行服务端业务
         // 将响应输出
         $response->send(); // Laravel 里请使用：return $response;
+    }
+
+
+    /**
+     *
+     */
+    public function actionServerVali(){
+        // 微信网页授权:
+        if(Yii::$app->wechat->isWechat && !Yii::$app->wechat->isAuthorized()) {
+            return Yii::$app->wechat->authorizeRequired()->send();
+        }
     }
 
 }
