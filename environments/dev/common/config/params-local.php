@@ -2,9 +2,9 @@
 return [
     'wxOptions' => [
         'debug'  => true,
-        'app_id' => 'your-app-id',
-        'secret' => 'you-secret',
-        'token'  => 'easywechat',
+        'app_id' => 'wx989a13a72b26347b',
+        'secret' => '753cb7b56f319f0254275f36e38b2544',
+        'token'  => 'youqu2016',
         // 'aes_key' => null, // 可选
         'log' => [
             'level' => 'debug',
