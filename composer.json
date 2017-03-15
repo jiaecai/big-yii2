@@ -21,7 +21,8 @@
         "overtrue/wechat": "~3.1",
         "yiisoft/yii2-redis": "^2.0",
         "flc/alidayu": "^2.0",
-        "aliyuncs/oss-sdk-php": "^2.2"
+        "aliyuncs/oss-sdk-php": "^2.2",
+        "maxwen/yii2-easy-wechat": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
