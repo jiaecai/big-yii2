@@ -35,7 +35,7 @@ return [
          */
         'oauth' => [
             'scopes'   => ['snsapi_userinfo'],
-            'callback' => '/examples/oauth_callback.php',
+            'callback' => '/big-yii2/frontend/web/index.php?r=wx/oauth-callback',
         ],
         /**
          * 微信支付
@@ -59,5 +59,43 @@ return [
             'timeout' => 3.0, // 超时时间（秒）
             //'verify' => false, // 关掉 SSL 认证（强烈不建议！！！）
         ],
+    ],
+
+    'WX_MENU' => [
+        [
+            "type" => "click",
+            "name" => "今日歌曲",
+            "key"  => "V1001_TODAY_MUSIC"
+        ],
+        [
+            "name"       => "菜单",
+            "sub_button" => [
+                [
+                    "type" => "view",
+                    "name" => "搜索",
+                    "url"  => "http://www.soso.com/"
+                ],
+                [
+                    "type" => "view",
+                    "name" => "视频",
+                    "url"  => "http://v.qq.com/"
+                ],
+                [
+                    "type" => "click",
+                    "name" => "赞一下我们",
+                    "key" => "V1001_GOOD"
+                ],
+            ],
+        ],
+    ],
+
+    'WX_MENU_MATCH' => [
+        "tag_id"=>"2",
+        "sex"=>"1",
+        "country"=>"中国",
+        "province"=>"广东",
+        "city"=>"广州",
+        "client_platform_type"=>"2",
+        "language"=>"zh_CN"
     ]
 ];
