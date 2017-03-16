@@ -12,4 +12,6 @@ return [
             // 'returnUrlParam' => '' # returnUrl param stored in session
         ],
     ],
+    'timeZone'=>'Asia/Shanghai',
+    'language' => 'zh-CN',
 ];
