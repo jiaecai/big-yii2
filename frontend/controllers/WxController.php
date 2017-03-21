@@ -105,12 +105,8 @@ class WxController extends Controller
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
         $userService   = $app->user;
-        $oauth  = $app->oauth;
-        $user = $userService->get($openId);
+        //$oauth  = $app->oauth;
 
-        $user['nickname'];
-        $user->nickname;
-        $user->get('nickname');
 
         $server->setMessageHandler(function ($message) {
             // $message->FromUserName // 用户的 openid
@@ -120,43 +116,69 @@ class WxController extends Controller
             $message->CreateTime;    #消息创建时间（时间戳）
             $message->MsgId;         #消息 ID（64位整型）
 
+            $user = $userService->get($openId);
+            $user['nickname'];
+            $user->nickname;
+            $user->get('nickname');
 
             switch ($message->MsgType) {
                 case 'event':
 
                     switch ($message->Event) {
-                        case 'subscribe':
+                        case 'subscribe':{//订阅
                             # code...
                             break;
-                        default:
-                            # code...
+                        }
+                        case "unsubscribe":{//取消订阅
                             break;
+                        }
+                        case "location":{//上报位置
+                            # 上报地理位置事件
+                            $message->Latitude;    #23.137466   地理位置纬度
+                            $message->Longitude;   #113.352425  地理位置经度
+                            $message->Precision;   #119.385040  地理位置精度
+                            break;
+                        }
+                        case "click":{//单击
+                            switch ($message->EventKey) {
+                                case "event_demo":{
+                                    //图文消息
+                                    $news = new News([
+                                        'title'       => $title,
+                                        'description' => '...',
+                                        'url'         => $url,
+                                        'image'       => $image,
+                                        // ...
+                                    ]);
+                                    return $news;
+                                    //return [$news1, $news2, $news3, $news4];
+                                    break;
+                                }
+                                default:{
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                        case "scancode_waitmsg":{//扫码返回
+                            # 扫描带参数二维码事件
+                            $message->EventKey;    #事件KEY值，比如：qrscene_123123，qrscene_为前缀，后面为二维码的参数值
+                            $message->Ticket;      #二维码的 ticket，可用来换取二维码图片
+                            break;
+                        }
+
+                        default:{
+                            # code...
+                            $text = new Text(['content' => '未知的事件类型：'.$message->Event]);
+                            return $text;
+                            break;
+                        }
+
                     }
 
-                    $message->Event       事件类型 （如：subscribe(订阅)、unsubscribe(取消订阅) ...， CLICK 等）
-
-                    # 扫描带参数二维码事件
-                    $message->EventKey    事件KEY值，比如：qrscene_123123，qrscene_为前缀，后面为二维码的参数值
-                    $message->Ticket      二维码的 ticket，可用来换取二维码图片
-
-                    # 上报地理位置事件
-                    $message->Latitude    23.137466   地理位置纬度
-                    $message->Longitude   113.352425  地理位置经度
-                    $message->Precision   119.385040  地理位置精度
-
-                    # 自定义菜单事件
-                    $message->EventKey    事件KEY值，与自定义菜单接口中KEY值对应，如：CUSTOM_KEY_001, www.qq.com
 
 
-                //图文消息
-                $news = new News([
-                    'title'       => $title,
-                    'description' => '...',
-                    'url'         => $url,
-                    'image'       => $image,
-                    // ...
-                ]);
-                    return [$news1, $news2, $news3, $news4];
+
 
                     //文章消息
                     - title 标题
@@ -181,14 +203,25 @@ class WxController extends Controller
 
                     break;
                 case 'text':
-                    $message->Content  文本消息内容
-                    $text = new Text(['content' => '您好！overtrue。']);
-                    return '收到文字消息';
+                    switch ($message->Content){
+                        case "关键词1":{
+                            $text = new Text(['content' => '您好！overtrue。我们已经收到您的消息']);
+                            return $text;
+                            break;
+                        }
+                        default:{//其他消息都通过多客服消息转发
+                            $transfer = new \EasyWeChat\Message\Transfer();
+                            //转发给指定客服
+                            $transfer->account($account);// 或者 $transfer->to($account);
+                            return $transfer;
+                        }
+                    }
                     break;
                 case 'image':
-                    $message->PicUrl   图片链接
+                    $message->PicUrl   #图片链接
                     $text = new Image(['media_id' => $mediaId]);
-                    return '收到图片消息';
+
+                    //return '收到图片消息';
                     break;
                 case 'voice':
                     $message->MediaId        语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
@@ -215,6 +248,8 @@ class WxController extends Controller
                     return '收到小视频消息';
                     break;
                 case 'location':
+
+
                     $message->Location_X  地理位置纬度
                     $message->Location_Y  地理位置经度
                     $message->Scale       地图缩放大小
@@ -369,6 +404,14 @@ class WxController extends Controller
         });
 
         */
+    }
+
+
+    /**
+     * 支付
+     */
+    public function actionPay(){
+
     }
 
 }

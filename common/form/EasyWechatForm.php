@@ -21,7 +21,7 @@ class EasyWechatForm extends BaseForm
 {
 
     /**
-     * 创建订单
+     * 微信支付相关：创建订单
      */
     public function createOrder(){
         $app = new Application(Yii::$app->params['WECHAT']);
@@ -84,6 +84,42 @@ class EasyWechatForm extends BaseForm
 // bill 为 csv 格式的内容
 // 保存为文件
         file_put_contents('YOUR/PATH/TO/bill-20140603.csv', $bill);
+    }
+
+
+    /**
+     * 发送模板消息
+     */
+    public function sendTempMsg($openId,$tempId,$url,$dataArray){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $notice = $app->notice;
+
+        /*
+         *
+        $openId = 'OPENID';
+        $templateId = 'ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY';
+        $url = '';
+        $data = array(
+            "first"    => array("恭喜你购买成功！", '#555555'),
+            "keynote1" => array("巧克力", "#336699"),
+            "keynote2" => array("39.8元", "#FF0000"),
+            "keynote3" => array("2014年9月16日", "#888888"),
+            "remark"   => array("欢迎再次购买！", "#5599FF"),
+        );
+        */
+
+        $messageId = $notice->send([
+            'touser' => $openId,
+            'template_id' => $tempId,
+            'url' => $url,
+            'data' => $dataArray,
+        ]);
+
+        var_dump($messageId);
+        /*
+        $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
+        var_dump($result);
+        */
     }
 
 }
