@@ -20,7 +20,9 @@ use EasyWeChat\Message\Video;
 use EasyWeChat\Message\Voice;
 use EasyWeChat\Message\News;
 use EasyWeChat\Message\Article;
+use EasyWeChat\Support\Collection;
 use EasyWeChat\Message\Material;
+
 
 /**
  * Site controller
@@ -104,9 +106,8 @@ class WxController extends Controller
     public function actionHandle(){
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
-        $userService   = $app->user;
+        //$userService   = $app->user;
         //$oauth  = $app->oauth;
-
 
         $server->setMessageHandler(function ($message) {
             // $message->FromUserName // 用户的 openid
@@ -116,10 +117,14 @@ class WxController extends Controller
             $message->CreateTime;    #消息创建时间（时间戳）
             $message->MsgId;         #消息 ID（64位整型）
 
+            $app = new Application(Yii::$app->params['WECHAT']);
+            $userService   = $app->user;
             $user = $userService->get($openId);
-            $user['nickname'];
+            echo $user['nickname'];
             $user->nickname;
             $user->get('nickname');
+            //修改用户备注
+            $userService->remark($openId, $remark); // 成功返回boolean
 
             switch ($message->MsgType) {
                 case 'event':
@@ -175,10 +180,6 @@ class WxController extends Controller
                         }
 
                     }
-
-
-
-
 
                     //文章消息
                     - title 标题
@@ -290,41 +291,13 @@ class WxController extends Controller
         $user = $userService->get($openId);
         echo $user->nickname;
 
-        //修改用户备注
-        $userService->remark($openId, $remark); // 成功返回boolean
 
 
-        /**
-         * 发送模板消息
-         */
-        $notice = $app->notice;
-        $userId = 'OPENID';
-        $templateId = 'ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY';
-        $url = 'http://overtrue.me';
-        $data = array(
-            "first"    => array("恭喜你购买成功！", '#555555'),
-            "keynote1" => array("巧克力", "#336699"),
-            "keynote2" => array("39.8元", "#FF0000"),
-            "keynote3" => array("2014年9月16日", "#888888"),
-            "remark"   => array("欢迎再次购买！", "#5599FF"),
-        );
-        $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
-        var_dump($result);
 
         /**
          * 群发消息
          */
-        $broadcast = $app->broadcast;
 
-        //群发消息给指定用户
-        $broadcast->send($messageType, $message, [$openId1, $openId2]);
-// 别名方式
-        $broadcast->sendText($text, [$openId1, $openId2]);
-        $broadcast->sendNews($mediaId, [$openId1, $openId2]);
-        $broadcast->sendVoice($mediaId, [$openId1, $openId2]);
-        $broadcast->sendImage($mediaId, [$openId1, $openId2]);
-        $broadcast->sendVideo($message, [$openId1, $openId2]);
-        $broadcast->sendCard($cardId, [$openId1, $openId2]);
     }
 
 
@@ -345,6 +318,39 @@ class WxController extends Controller
 // $user->getOriginal(); // 原始API返回的结果
 // $user->getToken(); // access_token， 比如用于地址共享时使用
 
+    }
+
+
+    /**
+     * 支付回调
+     */
+    public function actionPayCallback(){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $response = $app->payment->handleNotify(function($notify, $successful){
+            // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
+            $order = 查询订单($notify->out_trade_no);
+            if (!$order) { // 如果订单不存在
+                return 'Order not exist.'; // 告诉微信，我已经处理完了，订单没找到，别再通知我了
+            }
+            // 如果订单存在
+            // 检查订单是否已经更新过支付状态
+            if ($order->paid_at) { // 假设订单字段“支付时间”不为空代表已经支付
+                return true; // 已经支付成功了就不再更新了
+            }
+            // 用户是否支付成功
+            if ($successful) {
+                // 不是已经支付状态则修改为已经支付状态
+                $order->paid_at = time(); // 更新支付时间为当前时间
+                $order->status = 'paid';
+            } else { // 用户支付失败
+                $order->status = 'paid_fail';
+            }
+            $order->save(); // 保存订单
+
+            return true; // 或者错误消息，这里表示是否处理完成
+        });
+        $response->send(); // Laravel 里请使用：return $response;
+        return $response;
     }
 
 

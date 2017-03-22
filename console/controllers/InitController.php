@@ -24,6 +24,7 @@ class InitController extends BaseConsoleController
      */
    public function actionMysql(){
        //todo
+
    }
 
 }

@@ -36,7 +36,58 @@ class EasyWechatForm extends BaseForm
             'openid'           => '当前用户的 openid', // trade_type=JSAPI，此参数必传，用户在商户appid下的唯一标识，
             // ...
         ];
+        //通知url必须为直接可访问的url，不能携带参数。示例：
+        //带有POST参数，XML格式
         $order = new Order($attributes);
+
+        //公众号支付、扫码支付、APP 支付 都统一使用此接口完成订单的创建。
+        $result = $payment->prepare($order);
+        if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
+            $prepayId = $result->prepay_id;
+            return $prepayId;
+        }
+        return null;
+    }
+
+
+    /**
+     * 撤销订单
+     */
+    public function reverseOrder(){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $payment = $app->payment;
+
+        $orderNo = "商户系统内部的订单号（out_trade_no）";
+        $payment->reverse($orderNo);
+
+        $orderNo = "微信的订单号（transaction_id）";
+        $payment->reverseByTransactionId($orderNo);
+    }
+
+    /**
+     * 查询订单
+     */
+    public function queryOrder(){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $payment = $app->payment;
+
+        $orderNo = "商户系统内部的订单号（out_trade_no）";
+        $payment->query($orderNo);
+
+        $orderNo = "商户系统内部的订单号（out_trade_no）";
+        $payment->query($orderNo);
+
+    }
+
+    /**
+     * 关闭订单
+     */
+    public function closeOrder(){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $payment = $app->payment;
+
+        $orderNo = "商户系统内部的订单号（out_trade_no）";
+        $payment->query($orderNo);
     }
 
     /**
@@ -89,6 +140,10 @@ class EasyWechatForm extends BaseForm
 
     /**
      * 发送模板消息
+     * @param $openId
+     * @param $tempId
+     * @param $url
+     * @param $dataArray
      */
     public function sendTempMsg($openId,$tempId,$url,$dataArray){
         $app = new Application(Yii::$app->params['WECHAT']);
@@ -120,6 +175,25 @@ class EasyWechatForm extends BaseForm
         $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
         var_dump($result);
         */
+    }
+
+
+    /**
+     * 群发消息
+     */
+    public function broadcast($openIdArray){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $broadcast = $app->broadcast;
+
+        //群发消息给指定用户
+        $broadcast->send($messageType, $message, [$openId1, $openId2]);
+// 别名方式
+        $broadcast->sendText($text, [$openId1, $openId2]);
+        $broadcast->sendNews($mediaId, [$openId1, $openId2]);
+        $broadcast->sendVoice($mediaId, [$openId1, $openId2]);
+        $broadcast->sendImage($mediaId, [$openId1, $openId2]);
+        $broadcast->sendVideo($message, [$openId1, $openId2]);
+        $broadcast->sendCard($cardId, [$openId1, $openId2]);
     }
 
 }
