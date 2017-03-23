@@ -78,19 +78,10 @@ class WxController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
-
 
     /**
      * 服务器验证
+     * 无需页面
      */
     public function actionServVali(){
         $app = new Application(Yii::$app->params['WECHAT']);
@@ -102,6 +93,7 @@ class WxController extends Controller
 
     /**
      * 用户消息处理
+     * 总入口
      */
     public function actionHandle(){
         $app = new Application(Yii::$app->params['WECHAT']);
@@ -110,8 +102,6 @@ class WxController extends Controller
         //$oauth  = $app->oauth;
 
         $server->setMessageHandler(function ($message) {
-            // $message->FromUserName // 用户的 openid
-            // $message->MsgType // 消息类型：event, text....
             $message->ToUserName;    #接收方帐号（该公众号 ID）
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
             $message->CreateTime;    #消息创建时间（时间戳）
@@ -124,15 +114,15 @@ class WxController extends Controller
             $user->nickname;
             $user->get('nickname');
             //修改用户备注
-            $userService->remark($openId, $remark); // 成功返回boolean
+            //$userService->remark($openId, $remark); // 成功返回boolean
 
-            switch ($message->MsgType) {
-                case 'event':
-
+            switch ($message->MsgType) {// 消息类型：event, text....
+                case 'event':{
                     switch ($message->Event) {
                         case 'subscribe':{//订阅
                             # code...
-                            break;
+                            $text = new Text(['content' => '欢迎订阅BIG-YII2!'.$message->Event]);
+                            return $text;
                         }
                         case "unsubscribe":{//取消订阅
                             break;
@@ -146,6 +136,11 @@ class WxController extends Controller
                         }
                         case "click":{//单击
                             switch ($message->EventKey) {
+                                case "click":{
+                                    $text = new Text(['content' => '您触发了点击事件']);
+                                    return $text;
+                                    break;
+                                }
                                 case "event_demo":{
                                     //图文消息
                                     $news = new News([
@@ -159,6 +154,29 @@ class WxController extends Controller
                                     //return [$news1, $news2, $news3, $news4];
                                     break;
                                 }
+                                case "fasongtuwen":{
+                                    /*
+                                    //文章消息
+                                    - title 标题
+                                    - author 作者
+                                    - content 具体内容
+                                    - thumb_media_id 图文消息的封面图片素材id（必须是永久mediaID）
+- digest 图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空
+                                    - source_url 来源 URL
+                                    - show_cover 是否显示封面，0 为 false，即不显示，1 为 true，即显示
+
+                                    $article = new Article([
+                                        'title'   => 'EasyWeChat',
+                                        'author'  => 'overtrue',
+                                        'content' => 'EasyWeChat 是一个开源的微信 SDK，它... ...',
+                                        // ...
+                                    ]);
+
+                                    //素材消息
+                                    $material = new Material('mpnews', $mediaId);
+                                    */
+                                    break;
+                                }
                                 default:{
                                     break;
                                 }
@@ -167,47 +185,37 @@ class WxController extends Controller
                         }
                         case "scancode_waitmsg":{//扫码返回
                             # 扫描带参数二维码事件
-                            $message->EventKey;    #事件KEY值，比如：qrscene_123123，qrscene_为前缀，后面为二维码的参数值
+                            //$message->EventKey;    #事件KEY值，比如：qrscene_123123，qrscene_为前缀，后面为二维码的参数值
+                            $scanResult=$message->ScanCodeInfo->ScanResult;
+                            switch ($message->EventKey){
+                                case "scan_qr":{
+                                    $text = new Text(['content' => $scanResult]);
+                                    return $text;
+                                    break;
+                                }
+                                default:break;
+                            }
                             $message->Ticket;      #二维码的 ticket，可用来换取二维码图片
                             break;
                         }
-
                         default:{
                             # code...
                             $text = new Text(['content' => '未知的事件类型：'.$message->Event]);
                             return $text;
                             break;
                         }
-
                     }
-
-                    //文章消息
-                    - title 标题
-                - author 作者
-                - content 具体内容
-                - thumb_media_id 图文消息的封面图片素材id（必须是永久mediaID）
-- digest 图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空
-                - source_url 来源 URL
-                - show_cover 是否显示封面，0 为 false，即不显示，1 为 true，即显示
-
-                    $article = new Article([
-                        'title'   => 'EasyWeChat',
-                        'author'  => 'overtrue',
-                        'content' => 'EasyWeChat 是一个开源的微信 SDK，它... ...',
-                        // ...
-                    ]);
-
-                    //素材消息
-                    $material = new Material('mpnews', $mediaId);
-
                     return '收到事件消息';
-
                     break;
+                }
                 case 'text':
                     switch ($message->Content){
                         case "关键词1":{
                             $text = new Text(['content' => '您好！overtrue。我们已经收到您的消息']);
                             return $text;
+                            break;
+                        }
+                        case "关键词2":{
                             break;
                         }
                         default:{//其他消息都通过多客服消息转发
@@ -218,86 +226,66 @@ class WxController extends Controller
                         }
                     }
                     break;
-                case 'image':
-                    $message->PicUrl   #图片链接
+                case 'image':{
+                    $message->PicUrl;   #图片链接
                     $text = new Image(['media_id' => $mediaId]);
 
                     //return '收到图片消息';
                     break;
+                }
                 case 'voice':
-                    $message->MediaId        语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
-                    $message->Format         语音格式，如 amr，speex 等
-                    $message->Recognition * 开通语音识别后才有
+                    $message->MediaId;        #语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
+                    $message->Format;         #语音格式，如 amr，speex 等
+                    $message->Recognition;    #* 开通语音识别后才有
                     $voice = new Voice(['media_id' => $mediaId]);
                     return '收到语音消息';
                     break;
-                case 'video':
-                    $message->MediaId       视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
-                    $message->ThumbMediaId  视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
+                case 'video':{
+                    $message->MediaId;       #视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
+                    $message->ThumbMediaId;  #视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
                     $video = new Video([
                         'title' => $title,
                         'media_id' => $mediaId,
                         'description' => '...',
                         'thumb_media_id' => $thumb
                     ]);
-
                     return '收到视频消息';
                     break;
-                case 'shortvideo':
+                }
+                case 'shortvideo':{
                     $message->MediaId     视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
                     $message->ThumbMediaId    视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
                     return '收到小视频消息';
                     break;
-                case 'location':
-
-
-                    $message->Location_X  地理位置纬度
-                    $message->Location_Y  地理位置经度
-                    $message->Scale       地图缩放大小
-                    $message->Label       地理位置信息
+                }
+                case 'location':{
+                    $message->Location_X;  地理位置纬度
+                    $message->Location_Y;  地理位置经度
+                    $message->Scale;       地图缩放大小
+                    $message->Label;       地理位置信息
                 //微信不支持回复位置消息
                     return '收到坐标消息';
                     break;
-                case 'link':
-                    $message->Title        消息标题
-                    $message->Description  消息描述
-                    $message->Url          消息链接
+                }
+                case 'link':{
+                    $message->Title;        #消息标题
+                    $message->Description;  #消息描述
+                    $message->Url;          #消息链接
                 //微信不支持回复链接消息
                     return '收到链接消息';
                     break;
+                }
                 // ... 其它消息
-                default:
+                default:{
                     return '收到其它消息';
                     break;
+                }
             }
-            return "您好！欢迎关注我!";
+            return true;
         });
         $response = $server->serve();
-        $response->send(); // Laravel 里请使用：return $response;
-
-    }
-
-
-    /**
-     * 常用示例
-     */
-    public function actionDemo(){
-        $app = new Application(Yii::$app->params['WECHAT']);
-
-        /**
-         * 用户信息获取
-         */
-        $userService = $app->user;
-        $user = $userService->get($openId);
-        echo $user->nickname;
-
-
-
-
-        /**
-         * 群发消息
-         */
-
+        //$response->send(); // Laravel 里请使用：return $response;
+        return $response;
     }
 
 
@@ -321,37 +309,6 @@ class WxController extends Controller
     }
 
 
-    /**
-     * 支付回调
-     */
-    public function actionPayCallback(){
-        $app = new Application(Yii::$app->params['WECHAT']);
-        $response = $app->payment->handleNotify(function($notify, $successful){
-            // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
-            $order = 查询订单($notify->out_trade_no);
-            if (!$order) { // 如果订单不存在
-                return 'Order not exist.'; // 告诉微信，我已经处理完了，订单没找到，别再通知我了
-            }
-            // 如果订单存在
-            // 检查订单是否已经更新过支付状态
-            if ($order->paid_at) { // 假设订单字段“支付时间”不为空代表已经支付
-                return true; // 已经支付成功了就不再更新了
-            }
-            // 用户是否支付成功
-            if ($successful) {
-                // 不是已经支付状态则修改为已经支付状态
-                $order->paid_at = time(); // 更新支付时间为当前时间
-                $order->status = 'paid';
-            } else { // 用户支付失败
-                $order->status = 'paid_fail';
-            }
-            $order->save(); // 保存订单
-
-            return true; // 或者错误消息，这里表示是否处理完成
-        });
-        $response->send(); // Laravel 里请使用：return $response;
-        return $response;
-    }
 
 
     /**
@@ -386,38 +343,96 @@ class WxController extends Controller
         header('location:'. $targetUrl); // 跳转到 user/profile
     }
 
-    /**
-     *
-     */
-    public function actionServerVali(){
-        // 微信网页授权:
-        if(Yii::$app->wechat->isWechat && !Yii::$app->wechat->isAuthorized()) {
-            return Yii::$app->wechat->authorizeRequired()->send();
-        }
 
-        /*
-        $server = $app->server;
-        $oauth  = $app->oauth;
-        // ...
-        $userService = $app->user; // 用户API
-        $user = $userService->get($openId);
-        // $user 便是一个 EasyWeChat\Support\Collection 实例
-        $user['nickname'];
-        $user->nickname;
-        $user->get('nickname');
-        $app->server->setMessageHandler(function ($message) {
-            return "您好！欢迎关注我!";
+    /**
+     * 0、商城首页，
+     * @return string
+     */
+    public function actionMallIndex(){
+        $wareList=array();
+        return $this->render('mall_index', [
+            'wareList' => $wareList,
+        ]);
+        //todo 购物车功能？？暂时不提供
+    }
+
+
+    /**
+     * 1、商品详情
+     */
+    public function actionWareDetail($wareId){
+        //$orderId=
+        return $this->render('ware_detail', [
+            'wareId' => $wareId,
+        ]);
+    }
+
+    /**
+     * 1、充值
+     */
+    public function actionRecharge(){
+        return $this->render('recharge', [
+            //'wareId' => $wareId,
+        ]);
+    }
+
+    /**
+     * 2、充值或支付确认
+     */
+    public function actionPayConfirm($wareId=null,$orderId=null,$rechargeAmount=0){
+        $userId="缓存的";
+        //todo 带有订单和用户身份，等待用户下单，有下单按钮，点完后到达创建订单页面
+
+        $easyWechatPayForm=new \common\forms\EasyWechatPayForm();
+        $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,'url','openId');//蛋类商品下单
+
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $payment = $app->payment;
+        $config = $payment->configForJSSDKPayment($prepayId);
+        // 这个方法是取得js里支付所必须的参数用的。 没这个啥也做不了，除非你自己把js的参数生成一遍
+        $js = $app->js;
+
+        return $this->render('pay_confirm', [
+            'config' => $config,
+            'js' => $js,
+            'wareId' => $wareId,
+        ]);
+    }
+
+
+    /**
+     * 微信支付回调
+     */
+    public function actionPayCallback(){
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $response = $app->payment->handleNotify(function($notify, $successful){
+            // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
+            /*
+            $order = 查询订单($notify->out_trade_no);
+            if (!$order) { // 如果订单不存在
+                return 'Order not exist.'; // 告诉微信，我已经处理完了，订单没找到，别再通知我了
+            }
+            // 如果订单存在
+            // 检查订单是否已经更新过支付状态
+            if ($order->paid_at) { // 假设订单字段“支付时间”不为空代表已经支付
+                return true; // 已经支付成功了就不再更新了
+            }
+            */
+            // 用户是否支付成功
+            if ($successful) {
+                // 不是已经支付状态则修改为已经支付状态
+                $order->paid_at = time(); // 更新支付时间为当前时间
+                $order->status = 'paid';
+            } else { // 用户支付失败
+                $order->status = 'paid_fail';
+            }
+            $order->save(); // 保存订单
+
+            return true; // 或者错误消息，这里表示是否处理完成
         });
-
-        */
+        $response->send(); // Laravel 里请使用：return $response;
+        return $response;
     }
 
-
-    /**
-     * 支付
-     */
-    public function actionPay(){
-
-    }
 
 }

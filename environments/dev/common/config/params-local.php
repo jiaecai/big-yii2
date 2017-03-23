@@ -65,7 +65,7 @@ return [
         [
             "type" => "click",
             "name" => "今日歌曲",
-            "key"  => "V1001_TODAY_MUSIC"
+            "key"  => "click"
         ],
         [
             "name"       => "菜单",
@@ -84,6 +84,11 @@ return [
                     "type" => "click",
                     "name" => "赞一下我们",
                     "key" => "V1001_GOOD"
+                ],
+                [
+                    "type" => "scancode_waitmsg",
+                    "name" => "扫码",
+                    "key" => "scan_qr"
                 ],
             ],
         ],
