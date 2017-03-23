@@ -19,7 +19,7 @@ class ContactCest
 
     public function checkContactSubmitNoData(FunctionalTester $I)
     {
-        $I->submitForm('#contact-form', []);
+        $I->submitForm('#contact-forms', []);
         $I->see('Contact', 'h1');
         $I->seeValidationError('Name cannot be blank');
         $I->seeValidationError('Email cannot be blank');
@@ -30,7 +30,7 @@ class ContactCest
 
     public function checkContactSubmitNotCorrectEmail(FunctionalTester $I)
     {
-        $I->submitForm('#contact-form', [
+        $I->submitForm('#contact-forms', [
             'ContactForm[name]' => 'tester',
             'ContactForm[email]' => 'tester.email',
             'ContactForm[subject]' => 'test subject',
@@ -46,7 +46,7 @@ class ContactCest
 
     public function checkContactSubmitCorrectData(FunctionalTester $I)
     {
-        $I->submitForm('#contact-form', [
+        $I->submitForm('#contact-forms', [
             'ContactForm[name]' => 'tester',
             'ContactForm[email]' => 'tester@example.com',
             'ContactForm[subject]' => 'test subject',

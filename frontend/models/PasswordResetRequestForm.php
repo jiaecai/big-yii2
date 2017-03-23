@@ -6,7 +6,7 @@ use yii\base\Model;
 use common\models\User;
 
 /**
- * Password reset request form
+ * Password reset request forms
  */
 class PasswordResetRequestForm extends Model
 {

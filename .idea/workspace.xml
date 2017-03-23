@@ -2,182 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/favicon.ico" afterPath="$PROJECT_DIR$/backend/web/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/favicon.ico" afterPath="$PROJECT_DIR$/frontend/web/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/big-yii2.iml" afterPath="$PROJECT_DIR$/.idea/big-yii2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/controllers/TestController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/common/form/EasyWechatForm.php" afterPath="$PROJECT_DIR$/common/forms/EasyWechatForm.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/common/form/EasyWechatPayForm.php" afterPath="$PROJECT_DIR$/common/forms/EasyWechatPayForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/assets/AppAsset.php" afterPath="$PROJECT_DIR$/backend/assets/AppAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/codeception.yml" afterPath="$PROJECT_DIR$/backend/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/.gitignore" afterPath="$PROJECT_DIR$/backend/config/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/bootstrap.php" afterPath="$PROJECT_DIR$/backend/config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/main.php" afterPath="$PROJECT_DIR$/backend/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/params.php" afterPath="$PROJECT_DIR$/backend/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/config/test.php" afterPath="$PROJECT_DIR$/backend/config/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/controllers/SiteController.php" afterPath="$PROJECT_DIR$/backend/controllers/SiteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/.gitkeep" afterPath="$PROJECT_DIR$/backend/models/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/.gitignore" afterPath="$PROJECT_DIR$/backend/runtime/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_bootstrap.php" afterPath="$PROJECT_DIR$/backend/tests/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_data/.gitignore" afterPath="$PROJECT_DIR$/backend/tests/_data/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_data/login_data.php" afterPath="$PROJECT_DIR$/backend/tests/_data/login_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_output/.gitignore" afterPath="$PROJECT_DIR$/backend/tests/_output/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_support/.gitignore" afterPath="$PROJECT_DIR$/backend/tests/_support/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_support/FunctionalTester.php" afterPath="$PROJECT_DIR$/backend/tests/_support/FunctionalTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/_support/UnitTester.php" afterPath="$PROJECT_DIR$/backend/tests/_support/UnitTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/functional.suite.yml" afterPath="$PROJECT_DIR$/backend/tests/functional.suite.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/functional/LoginCest.php" afterPath="$PROJECT_DIR$/backend/tests/functional/LoginCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/functional/_bootstrap.php" afterPath="$PROJECT_DIR$/backend/tests/functional/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/unit.suite.yml" afterPath="$PROJECT_DIR$/backend/tests/unit.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/tests/unit/_bootstrap.php" afterPath="$PROJECT_DIR$/backend/tests/unit/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/layouts/main.php" afterPath="$PROJECT_DIR$/backend/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/site/error.php" afterPath="$PROJECT_DIR$/backend/views/site/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/site/index.php" afterPath="$PROJECT_DIR$/backend/views/site/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/views/site/login.php" afterPath="$PROJECT_DIR$/backend/views/site/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/.gitignore" afterPath="$PROJECT_DIR$/backend/web/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/assets/.gitignore" afterPath="$PROJECT_DIR$/backend/web/assets/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/css/site.css" afterPath="$PROJECT_DIR$/backend/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/web/robots.txt" afterPath="$PROJECT_DIR$/backend/web/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeception.yml" afterPath="$PROJECT_DIR$/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/codeception.yml" afterPath="$PROJECT_DIR$/common/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/.gitignore" afterPath="$PROJECT_DIR$/common/config/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/bootstrap.php" afterPath="$PROJECT_DIR$/common/config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main.php" afterPath="$PROJECT_DIR$/common/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/params.php" afterPath="$PROJECT_DIR$/common/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/test.php" afterPath="$PROJECT_DIR$/common/config/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/fixtures/User.php" afterPath="$PROJECT_DIR$/common/fixtures/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/form/EasyWechatForm.php" afterPath="$PROJECT_DIR$/common/form/EasyWechatForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/form/EasyWechatPayForm.php" afterPath="$PROJECT_DIR$/common/form/EasyWechatPayForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/initial/init.sql" afterPath="$PROJECT_DIR$/common/initial/init.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/mail/layouts/html.php" afterPath="$PROJECT_DIR$/common/mail/layouts/html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/mail/layouts/text.php" afterPath="$PROJECT_DIR$/common/mail/layouts/text.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/mail/passwordResetToken-html.php" afterPath="$PROJECT_DIR$/common/mail/passwordResetToken-html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/mail/passwordResetToken-text.php" afterPath="$PROJECT_DIR$/common/mail/passwordResetToken-text.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/LoginForm.php" afterPath="$PROJECT_DIR$/common/models/LoginForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/User.php" afterPath="$PROJECT_DIR$/common/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/sdk/alidayu.php" afterPath="$PROJECT_DIR$/common/sdk/alidayu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/_bootstrap.php" afterPath="$PROJECT_DIR$/common/tests/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/_data/user.php" afterPath="$PROJECT_DIR$/common/tests/_data/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/_output/.gitignore" afterPath="$PROJECT_DIR$/common/tests/_output/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/_support/.gitignore" afterPath="$PROJECT_DIR$/common/tests/_support/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/_support/UnitTester.php" afterPath="$PROJECT_DIR$/common/tests/_support/UnitTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/unit.suite.yml" afterPath="$PROJECT_DIR$/common/tests/unit.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/tests/unit/models/LoginFormTest.php" afterPath="$PROJECT_DIR$/common/tests/unit/models/LoginFormTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/widgets/Alert.php" afterPath="$PROJECT_DIR$/common/widgets/Alert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/config/.gitignore" afterPath="$PROJECT_DIR$/console/config/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/config/bootstrap.php" afterPath="$PROJECT_DIR$/console/config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/config/main.php" afterPath="$PROJECT_DIR$/console/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/config/params.php" afterPath="$PROJECT_DIR$/console/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/controllers/.gitkeep" afterPath="$PROJECT_DIR$/console/controllers/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/controllers/InitController.php" afterPath="$PROJECT_DIR$/console/controllers/InitController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/controllers/WxController.php" afterPath="$PROJECT_DIR$/console/controllers/WxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" afterPath="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/models/.gitkeep" afterPath="$PROJECT_DIR$/console/models/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/runtime/.gitignore" afterPath="$PROJECT_DIR$/console/runtime/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/backend/config/main-local.php" afterPath="$PROJECT_DIR$/environments/dev/backend/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/backend/config/params-local.php" afterPath="$PROJECT_DIR$/environments/dev/backend/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/backend/config/test-local.php" afterPath="$PROJECT_DIR$/environments/dev/backend/config/test-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/backend/web/index-test.php" afterPath="$PROJECT_DIR$/environments/dev/backend/web/index-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/backend/web/index.php" afterPath="$PROJECT_DIR$/environments/dev/backend/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/common/config/main-local.php" afterPath="$PROJECT_DIR$/environments/dev/common/config/main-local.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/common/config/params-local.php" afterPath="$PROJECT_DIR$/environments/dev/common/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/common/config/test-local.php" afterPath="$PROJECT_DIR$/environments/dev/common/config/test-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/console/config/main-local.php" afterPath="$PROJECT_DIR$/environments/dev/console/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/console/config/params-local.php" afterPath="$PROJECT_DIR$/environments/dev/console/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/frontend/config/main-local.php" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/frontend/config/params-local.php" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/frontend/config/test-local.php" afterPath="$PROJECT_DIR$/environments/dev/frontend/config/test-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/frontend/web/index-test.php" afterPath="$PROJECT_DIR$/environments/dev/frontend/web/index-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/frontend/web/index.php" afterPath="$PROJECT_DIR$/environments/dev/frontend/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/yii" afterPath="$PROJECT_DIR$/environments/dev/yii" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/yii_test" afterPath="$PROJECT_DIR$/environments/dev/yii_test" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/yii_test.bat" afterPath="$PROJECT_DIR$/environments/dev/yii_test.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/index.php" afterPath="$PROJECT_DIR$/environments/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/backend/config/main-local.php" afterPath="$PROJECT_DIR$/environments/prod/backend/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/backend/config/params-local.php" afterPath="$PROJECT_DIR$/environments/prod/backend/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/backend/web/index.php" afterPath="$PROJECT_DIR$/environments/prod/backend/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/common/config/main-local.php" afterPath="$PROJECT_DIR$/environments/prod/common/config/main-local.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/common/config/params-local.php" afterPath="$PROJECT_DIR$/environments/prod/common/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/console/config/main-local.php" afterPath="$PROJECT_DIR$/environments/prod/console/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/console/config/params-local.php" afterPath="$PROJECT_DIR$/environments/prod/console/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/frontend/config/main-local.php" afterPath="$PROJECT_DIR$/environments/prod/frontend/config/main-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/frontend/config/params-local.php" afterPath="$PROJECT_DIR$/environments/prod/frontend/config/params-local.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/frontend/web/index.php" afterPath="$PROJECT_DIR$/environments/prod/frontend/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/prod/yii" afterPath="$PROJECT_DIR$/environments/prod/yii" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/assets/AppAsset.php" afterPath="$PROJECT_DIR$/frontend/assets/AppAsset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/codeception.yml" afterPath="$PROJECT_DIR$/frontend/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/.gitignore" afterPath="$PROJECT_DIR$/frontend/config/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/bootstrap.php" afterPath="$PROJECT_DIR$/frontend/config/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/main.php" afterPath="$PROJECT_DIR$/frontend/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/params.php" afterPath="$PROJECT_DIR$/frontend/config/params.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/test.php" afterPath="$PROJECT_DIR$/frontend/config/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/WxController.php" afterPath="$PROJECT_DIR$/frontend/controllers/WxController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/ContactForm.php" afterPath="$PROJECT_DIR$/frontend/models/ContactForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" afterPath="$PROJECT_DIR$/frontend/models/PasswordResetRequestForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" afterPath="$PROJECT_DIR$/frontend/models/ResetPasswordForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/SignupForm.php" afterPath="$PROJECT_DIR$/frontend/models/SignupForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/runtime/.gitignore" afterPath="$PROJECT_DIR$/frontend/runtime/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_bootstrap.php" afterPath="$PROJECT_DIR$/frontend/tests/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_data/login_data.php" afterPath="$PROJECT_DIR$/frontend/tests/_data/login_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_data/user.php" afterPath="$PROJECT_DIR$/frontend/tests/_data/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_output/.gitignore" afterPath="$PROJECT_DIR$/frontend/tests/_output/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_support/.gitignore" afterPath="$PROJECT_DIR$/frontend/tests/_support/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_support/FunctionalTester.php" afterPath="$PROJECT_DIR$/frontend/tests/_support/FunctionalTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/_support/UnitTester.php" afterPath="$PROJECT_DIR$/frontend/tests/_support/UnitTester.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/acceptance.suite.yml.example" afterPath="$PROJECT_DIR$/frontend/tests/acceptance.suite.yml.example" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/acceptance/HomeCest.php" afterPath="$PROJECT_DIR$/frontend/tests/acceptance/HomeCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/acceptance/_bootstrap.php" afterPath="$PROJECT_DIR$/frontend/tests/acceptance/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional.suite.yml" afterPath="$PROJECT_DIR$/frontend/tests/functional.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/AboutCest.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/AboutCest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/ContactCest.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/ContactCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/HomeCest.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/HomeCest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/LoginCest.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/LoginCest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/SignupCest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/functional/_bootstrap.php" afterPath="$PROJECT_DIR$/frontend/tests/functional/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit.suite.yml" afterPath="$PROJECT_DIR$/frontend/tests/unit.suite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit/_bootstrap.php" afterPath="$PROJECT_DIR$/frontend/tests/unit/_bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/ContactFormTest.php" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/ContactFormTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/PasswordResetRequestFormTest.php" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/PasswordResetRequestFormTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/ResetPasswordFormTest.php" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/ResetPasswordFormTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/tests/unit/models/SignupFormTest.php" afterPath="$PROJECT_DIR$/frontend/tests/unit/models/SignupFormTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/about.php" afterPath="$PROJECT_DIR$/frontend/views/site/about.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/contact.php" afterPath="$PROJECT_DIR$/frontend/views/site/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/error.php" afterPath="$PROJECT_DIR$/frontend/views/site/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/index.php" afterPath="$PROJECT_DIR$/frontend/views/site/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/login.php" afterPath="$PROJECT_DIR$/frontend/views/site/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/requestPasswordResetToken.php" afterPath="$PROJECT_DIR$/frontend/views/site/requestPasswordResetToken.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/resetPassword.php" afterPath="$PROJECT_DIR$/frontend/views/site/resetPassword.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/signup.php" afterPath="$PROJECT_DIR$/frontend/views/site/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx/demo.php" afterPath="$PROJECT_DIR$/frontend/views/wx/demo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx/mall_index.php" afterPath="$PROJECT_DIR$/frontend/views/wx/mall_index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx/pay_confirm.php" afterPath="$PROJECT_DIR$/frontend/views/wx/pay_confirm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx/recharge.php" afterPath="$PROJECT_DIR$/frontend/views/wx/recharge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx/ware_detail.php" afterPath="$PROJECT_DIR$/frontend/views/wx/ware_detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/.gitignore" afterPath="$PROJECT_DIR$/frontend/web/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/assets/.gitignore" afterPath="$PROJECT_DIR$/frontend/web/assets/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/css/site.css" afterPath="$PROJECT_DIR$/frontend/web/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/robots.txt" afterPath="$PROJECT_DIR$/frontend/web/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/init.bat" afterPath="$PROJECT_DIR$/init.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.php" afterPath="$PROJECT_DIR$/requirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/config/.gitignore" afterPath="$PROJECT_DIR$/vagrant/config/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml" afterPath="$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/nginx/app.conf" afterPath="$PROJECT_DIR$/vagrant/nginx/app.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/nginx/log/.gitignore" afterPath="$PROJECT_DIR$/vagrant/nginx/log/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/always-as-root.sh" afterPath="$PROJECT_DIR$/vagrant/provision/always-as-root.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/once-as-root.sh" afterPath="$PROJECT_DIR$/vagrant/provision/once-as-root.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/once-as-vagrant.sh" afterPath="$PROJECT_DIR$/vagrant/provision/once-as-vagrant.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii.bat" afterPath="$PROJECT_DIR$/yii.bat" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -196,22 +47,47 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="540">
+              <caret line="407" column="11" lean-forward="true" selection-start-line="386" selection-start-column="8" selection-end-line="407" selection-end-column="11" />
+              <folding>
+                <element signature="e#39#47#0#PHP" expanded="true" />
+                <element signature="e#10246#10521#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/controllers/WxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-local.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/environments/dev/common/config/main-local.php">
+      <file leaf-file-name="TestController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/console/controllers/TestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="325">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EasyWechatPayForm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/forms/EasyWechatPayForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-147">
+              <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding>
+                <element signature="e#116#141#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -219,78 +95,8 @@
       <file leaf-file-name="params-local.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/environments/dev/common/config/params-local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test-local.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/environments/dev/common/config/test-local.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yii" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/environments/dev/yii">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="74" column="40" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ware_detail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/wx/ware_detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mall_index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/wx/mall_index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pay_confirm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/views/wx/pay_confirm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -317,24 +123,26 @@
         <option value="$PROJECT_DIR$/environments/prod/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/environments/prod/common/config/params-local.php" />
         <option value="$PROJECT_DIR$/common/config/main.php" />
-        <option value="$PROJECT_DIR$/console/controllers/WxController.php" />
         <option value="$PROJECT_DIR$/environments/dev/frontend/config/params-local.php" />
         <option value="$PROJECT_DIR$/environments/dev/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/console/controllers/InitController.php" />
-        <option value="$PROJECT_DIR$/environments/dev/common/config/params-local.php" />
-        <option value="$PROJECT_DIR$/common/form/EasyWechatForm.php" />
         <option value="$PROJECT_DIR$/frontend/views/wx/new_order.php" />
-        <option value="$PROJECT_DIR$/common/form/EasyWechatPayForm.php" />
         <option value="$PROJECT_DIR$/frontend/views/wx/to_be_payed.php" />
         <option value="$PROJECT_DIR$/frontend/views/wx/recharge.php" />
         <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/views/wx/mall_index.php" />
         <option value="$PROJECT_DIR$/frontend/views/wx/ware_detail.php" />
-        <option value="$PROJECT_DIR$/frontend/views/wx/pay_confirm.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/WxController.php" />
         <option value="$PROJECT_DIR$/vendor/bin/markdown" />
         <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/common/form/EasyWechatForm.php" />
+        <option value="$PROJECT_DIR$/frontend/views/wx/pay_confirm.php" />
+        <option value="$PROJECT_DIR$/common/form/EasyWechatPayForm.php" />
+        <option value="$PROJECT_DIR$/environments/dev/common/config/params-local.php" />
+        <option value="$PROJECT_DIR$/frontend/controllers/WxController.php" />
+        <option value="$PROJECT_DIR$/console/controllers/WxController.php" />
+        <option value="$PROJECT_DIR$/common/forms/EasyWechatPayForm.php" />
+        <option value="$PROJECT_DIR$/console/controllers/TestController.php" />
       </list>
     </option>
   </component>
@@ -347,7 +155,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1.3">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-redis" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
@@ -487,6 +295,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wx" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -503,10 +315,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,6 +336,66 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big-yii2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -535,7 +403,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -543,15 +411,15 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/views/wx" />
-      <recent name="$PROJECT_DIR$/common/form" />
-      <recent name="$PROJECT_DIR$/console/controllers" />
-      <recent name="$PROJECT_DIR$/common/base" />
-      <recent name="$PROJECT_DIR$/common/sdk" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/common/sdk/WX_PAY" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/console/controllers" />
+      <recent name="$PROJECT_DIR$/environments/prod/common/config" />
+      <recent name="$PROJECT_DIR$/frontend/views/wx" />
+      <recent name="$PROJECT_DIR$/common/form" />
+      <recent name="$PROJECT_DIR$/common/base" />
     </key>
   </component>
   <component name="RunManager">
@@ -628,7 +496,7 @@
       <workItem from="1489577393194" duration="13487000" />
       <workItem from="1489717608820" duration="2182000" />
       <workItem from="1489920100092" duration="13920000" />
-      <workItem from="1490300662676" duration="235000" />
+      <workItem from="1490300662676" duration="6989000" />
     </task>
     <task id="LOCAL-00001" summary="fir update yii2">
       <created>1489577617507</created>
@@ -707,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490298289843</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1490300978965</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1490300978965</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29824000" />
+    <option name="totallyTimeSpent" value="36578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -721,11 +596,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1720517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2369863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2369863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -733,7 +610,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -761,13 +637,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
-            <element signature="e#7573#8333#0#PHP" expanded="false" />
-            <element signature="e#8350#8560#0#PHP" expanded="false" />
-            <element signature="e#8577#8920#0#PHP" expanded="false" />
-            <element signature="e#8937#9440#0#PHP" expanded="false" />
-            <element signature="e#9457#9707#0#PHP" expanded="false" />
-            <element signature="e#9724#10053#0#PHP" expanded="false" />
-            <element signature="e#10070#10345#0#PHP" expanded="false" />
+            <element signature="e#10246#10521#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -810,13 +680,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
-            <element signature="e#7573#8333#0#PHP" expanded="false" />
-            <element signature="e#8350#8560#0#PHP" expanded="false" />
-            <element signature="e#8577#8920#0#PHP" expanded="false" />
-            <element signature="e#8937#9440#0#PHP" expanded="false" />
-            <element signature="e#9457#9707#0#PHP" expanded="false" />
-            <element signature="e#9724#10053#0#PHP" expanded="false" />
-            <element signature="e#10070#10345#0#PHP" expanded="false" />
+            <element signature="e#10246#10521#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -825,6 +689,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#38#46#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,13 +701,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
-            <element signature="e#7573#8333#0#PHP" expanded="false" />
-            <element signature="e#8350#8560#0#PHP" expanded="false" />
-            <element signature="e#8577#8920#0#PHP" expanded="false" />
-            <element signature="e#8937#9440#0#PHP" expanded="false" />
-            <element signature="e#9457#9707#0#PHP" expanded="false" />
-            <element signature="e#9724#10053#0#PHP" expanded="false" />
-            <element signature="e#10070#10345#0#PHP" expanded="false" />
+            <element signature="e#10246#10521#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -849,6 +710,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#38#46#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -863,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/environments/prod/common/config/params-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -919,6 +776,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-63">
           <caret line="51" column="57" lean-forward="false" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -947,13 +805,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/base/BaseForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -968,13 +820,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/controllers/WxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,6 +828,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-600">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -989,13 +836,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/form/EasyWechatForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,13 +845,6 @@
         <state relative-caret-position="-207">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/form/EasyWechatPayForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1026,6 +860,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,23 +868,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4905">
-          <caret line="387" column="0" lean-forward="false" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#47#0#PHP" expanded="true" />
-            <element signature="e#7573#8333#0#PHP" expanded="false" />
-            <element signature="e#8350#8560#0#PHP" expanded="false" />
-            <element signature="e#8577#8920#0#PHP" expanded="false" />
-            <element signature="e#8937#9440#0#PHP" expanded="false" />
-            <element signature="e#9457#9707#0#PHP" expanded="false" />
-            <element signature="e#9724#10053#0#PHP" expanded="false" />
-            <element signature="e#10070#10345#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,18 +880,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bin/markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <marker date="1490299366000" expanded="true" signature="2136:2488" ph="..." />
+            <marker date="1490299366000" expanded="true" signature="2143:2457" ph="..." />
+            <marker date="1490299366000" expanded="true" signature="2221:2449" ph="..." />
+            <marker date="1490299366000" expanded="true" signature="2464:2480" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#172#180#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+          <folding>
+            <element signature="e#39#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/environments/dev/common/config/main-local.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/environments/dev/common/config/params-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1085,17 +929,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bin/markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/environments/dev/yii">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1116,26 +961,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/forms/EasyWechatForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#116#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/base/BaseForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/sdk/WX_PAY/cert/apiclient_cert.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environments/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/wx/pay_confirm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="310">
+          <caret line="36" column="130" lean-forward="true" selection-start-line="36" selection-start-column="130" selection-end-line="36" selection-end-column="130" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/site/index.php">
+    <entry file="file://$PROJECT_DIR$/environments/prod/common/config/params-local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+    <entry file="file://$PROJECT_DIR$/environments/dev/common/config/params-local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="74" column="40" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+        <state relative-caret-position="345">
+          <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/controllers/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="407" column="11" lean-forward="true" selection-start-line="386" selection-start-column="8" selection-end-line="407" selection-end-column="11" />
+          <folding>
+            <element signature="e#39#47#0#PHP" expanded="true" />
+            <element signature="e#10246#10521#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/forms/EasyWechatPayForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#116#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/controllers/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>

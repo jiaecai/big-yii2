@@ -22,7 +22,7 @@ use EasyWeChat\Message\News;
 use EasyWeChat\Message\Article;
 use EasyWeChat\Support\Collection;
 use EasyWeChat\Message\Material;
-
+use common\forms\EasyWechatPayForm;
 
 /**
  * Site controller
@@ -143,6 +143,7 @@ class WxController extends Controller
                                 }
                                 case "event_demo":{
                                     //图文消息
+                                    /*
                                     $news = new News([
                                         'title'       => $title,
                                         'description' => '...',
@@ -151,6 +152,7 @@ class WxController extends Controller
                                         // ...
                                     ]);
                                     return $news;
+                                    */
                                     //return [$news1, $news2, $news3, $news4];
                                     break;
                                 }
@@ -221,14 +223,14 @@ class WxController extends Controller
                         default:{//其他消息都通过多客服消息转发
                             $transfer = new \EasyWeChat\Message\Transfer();
                             //转发给指定客服
-                            $transfer->account($account);// 或者 $transfer->to($account);
+                            //$transfer->account($account);// 或者 $transfer->to($account);
                             return $transfer;
                         }
                     }
                     break;
                 case 'image':{
                     $message->PicUrl;   #图片链接
-                    $text = new Image(['media_id' => $mediaId]);
+                    //$text = new Image(['media_id' => $mediaId]);
 
                     //return '收到图片消息';
                     break;
@@ -237,32 +239,34 @@ class WxController extends Controller
                     $message->MediaId;        #语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
                     $message->Format;         #语音格式，如 amr，speex 等
                     $message->Recognition;    #* 开通语音识别后才有
-                    $voice = new Voice(['media_id' => $mediaId]);
+                    //$voice = new Voice(['media_id' => $mediaId]);
                     return '收到语音消息';
                     break;
                 case 'video':{
                     $message->MediaId;       #视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
                     $message->ThumbMediaId;  #视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
+                    /*
                     $video = new Video([
                         'title' => $title,
                         'media_id' => $mediaId,
                         'description' => '...',
                         'thumb_media_id' => $thumb
                     ]);
+                    */
                     return '收到视频消息';
                     break;
                 }
                 case 'shortvideo':{
-                    $message->MediaId     视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
-                    $message->ThumbMediaId    视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
+                    $message->MediaId;     //视频消息媒体id，可以调用多媒体文件下载接口拉取数据。
+                    $message->ThumbMediaId;//    视频消息缩略图的媒体id，可以调用多媒体文件下载接口拉取数据。
                     return '收到小视频消息';
                     break;
                 }
                 case 'location':{
-                    $message->Location_X;  地理位置纬度
-                    $message->Location_Y;  地理位置经度
-                    $message->Scale;       地图缩放大小
-                    $message->Label;       地理位置信息
+                    $message->Location_X;  //地理位置纬度
+                    $message->Location_Y;  #地理位置经度
+                    $message->Scale;       #地图缩放大小
+                    $message->Label;       #地理位置信息
                 //微信不支持回复位置消息
                     return '收到坐标消息';
                     break;
@@ -383,11 +387,16 @@ class WxController extends Controller
         $userId="缓存的";
         //todo 带有订单和用户身份，等待用户下单，有下单按钮，点完后到达创建订单页面
 
-        $easyWechatPayForm=new \common\forms\EasyWechatPayForm();
+        $app = new Application(Yii::$app->params['WECHAT']);
+
+        $easyWechatPayForm = new EasyWechatPayForm();
         $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,'url','openId');//蛋类商品下单
 
-        $app = new Application(Yii::$app->params['WECHAT']);
+        echo "here";
+        exit;
         $payment = $app->payment;
+        var_dump($payment);
+        exit;
         $config = $payment->configForJSSDKPayment($prepayId);
         // 这个方法是取得js里支付所必须的参数用的。 没这个啥也做不了，除非你自己把js的参数生成一遍
         $js = $app->js;

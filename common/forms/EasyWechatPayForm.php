@@ -14,7 +14,7 @@ use EasyWeChat\Payment\Order;
 use EasyWeChat\Foundation\Application;
 
 /**
- * Class QrCodeForm
+ * Class EasyWechatPayForm
  * @package common\forms
  */
 class EasyWechatPayForm extends BaseForm
@@ -33,25 +33,35 @@ class EasyWechatPayForm extends BaseForm
             'detail'           => 'iPad mini 16G 白色',
             'out_trade_no'     => '1217752501201407033233368018',
             'total_fee'        => 5388, // 单位：分
+            //通知url必须为直接可访问的url，不能携带参数。示例：
             //'notify_url'       => 'http://xxx.com/order-notify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'openid'           => $openId, // trade_type=JSAPI，此参数必传，用户在商户appid下的唯一标识，
             // ...
         ];
-        //通知url必须为直接可访问的url，不能携带参数。示例：
+
         //带有POST参数，XML格式
         $order = new Order($attributes);
 
         //公众号支付、扫码支付、APP 支付 都统一使用此接口完成订单的创建。
-        $result = $payment->prepare($order);
+        try{
+            echo "herer";
+            $result = $payment->prepare($order);
+        }catch (\Exception $e){
+            echo "here1";
+            var_dump($e);
+        }
+
+        echo "here";
+        exit;
+
         if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
             $prepayId = $result->prepay_id;
+            return $prepayId;
             //return $prepayId;
         }else{
             var_dump($result);
             die("出错了。");  // 出错就说出来，不然还能怎样？
         }
-        return $prepayId;
-
     }
 
 

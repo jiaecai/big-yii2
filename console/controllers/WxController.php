@@ -39,4 +39,6 @@ class WxController extends BaseConsoleController
        //$menus = $menu->test($openId);  //测试个性化菜单
    }
 
+
+
 }

@@ -14,7 +14,7 @@ use EasyWeChat\Payment\Order;
 use EasyWeChat\Foundation\Application;
 
 /**
- * Class QrCodeForm
+ * Class EasyWechatForm
  * @package common\forms
  */
 class EasyWechatForm extends BaseForm

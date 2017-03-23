@@ -5,7 +5,7 @@ use yii\base\Model;
 use common\models\User;
 
 /**
- * Signup form
+ * Signup forms
  */
 class SignupForm extends Model
 {

@@ -6,7 +6,7 @@ use frontend\tests\FunctionalTester;
 
 class SignupCest
 {
-    protected $formId = '#form-signup';
+    protected $formId = '#forms-signup';
 
 
     public function _before(FunctionalTester $I)
@@ -52,6 +52,6 @@ class SignupCest
             'email' => 'tester.email@example.com',
         ]);
 
-        $I->see('Logout (tester)', 'form button[type=submit]');
+        $I->see('Logout (tester)', 'forms button[type=submit]');
     }
 }
