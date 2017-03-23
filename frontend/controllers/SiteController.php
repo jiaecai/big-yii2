@@ -72,6 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        ini_set("display_errors", "On");
         return $this->render('index');
     }
 
