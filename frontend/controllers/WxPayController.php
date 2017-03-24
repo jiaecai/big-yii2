@@ -123,8 +123,9 @@ class WxPayController extends Controller
         $payment = $app->payment;
 
         $easyWechatPayForm = new EasyWechatPayForm();
-        $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,'url','openId');//蛋类商品下单
-
+        $user = $_SESSION['wechat_user'];
+        $url="https://www.baidu.com";
+        $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,$url,$user->id);//蛋类商品下单
 
         //$json = $payment->configForPayment($prepayId);
 
