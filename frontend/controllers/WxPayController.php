@@ -85,20 +85,16 @@ class WxPayController extends Controller
      */
     public function actionMallIndex(){
 
-        $app = new Application(Yii::$app->params['WECHAT']);
-        $oauth = $app->oauth;
-        // 未登录
-        if (empty($_SESSION['wechat_user'])) {
-            $_SESSION['route'] = 'wx-pay/mall-index'; //需要授权的页面
-            return $oauth->redirect();
-        }
+        \common\forms\EasyWechatForm::quickOauth("wx-pay/mall-index");
+
         // 已经登录过
-        $user = $_SESSION['wechat_user'];
+        $user = $_COOKIE['wechat_user'];
         // ...
 
         $wareList=array();
         return $this->render('mall_index', [
             'wareList' => $wareList,
+            'openId' => $user->id,
         ]);
         //todo 购物车功能？？暂时不提供
     }

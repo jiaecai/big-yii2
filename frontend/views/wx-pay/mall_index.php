@@ -9,6 +9,7 @@ $this->title = '商城首页';
 
     <div class="jumbotron">
         <h1>商城首页</h1>
+        <p>openid=<?=$openId;?></p>
 
         <p class="lead">欢迎使用商城</p>
 
