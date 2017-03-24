@@ -325,6 +325,9 @@ class WxController extends Controller
         // $user->getOriginal(); // 原始API返回的结果
         // $user->getToken(); // access_token， 比如用于地址共享时使用
 
+        session_id($user->id);
+        session_start();
+
         $_SESSION['wechat_user'] = $user->toArray();//缓存
         //todo 我们单独的逻辑
 
