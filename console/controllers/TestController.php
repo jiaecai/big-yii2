@@ -34,7 +34,8 @@ class TestController extends BaseConsoleController
 
        $easyWechatPayForm = new \common\forms\EasyWechatPayForm();
        $url="https://www.baidu.com";
-       $openId="o7C_1wK0Mo6PBJg4KaVrhPf68od8";
+       $openId="o7C_1wK0Mo6PBJg4KaVrhPf68od8";//测试号用
+       $openId="o8h3Rs6LrUVB-MuH4skeMtzEyRZ0";//生产号用
        $prepayId=$easyWechatPayForm->createSingleWareOrder('wareId',$url,$openId);//蛋类商品下单
 
        if($prepayId){
