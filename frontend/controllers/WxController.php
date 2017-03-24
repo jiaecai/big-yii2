@@ -105,6 +105,7 @@ class WxController extends Controller
             switch ($message->MsgType) {// 消息类型：event, text....
                 case 'event':{
                     switch ($message->Event) {
+                        case "SUBSCRIBE":
                         case 'subscribe':{//订阅
                             # code...
                             $text = new Text(['content' => '欢迎订阅BIG-YII2!'.$message->Event]);
@@ -120,8 +121,10 @@ class WxController extends Controller
                             $message->Precision;   #119.385040  地理位置精度
                             break;
                         }
+                        case "CLICK":
                         case "click":{//单击
                             switch ($message->EventKey) {
+                                case "CLICK":
                                 case "click":{
                                     $text = new Text(['content' => '您触发了点击事件(openid='.$openId]);
                                     return $text;
@@ -312,7 +315,8 @@ class WxController extends Controller
         $oauth = $app->oauth;
         // 未登录
         if (empty($_SESSION['wechat_user'])) {
-            $_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
+            //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
+            $_SESSION['route'] = 'wx/page-need-oauth'; //需要授权的页面
             return $oauth->redirect();
             // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
             // $oauth->redirect()->send();
@@ -342,8 +346,10 @@ class WxController extends Controller
 
         $_SESSION['wechat_user'] = $user->toArray();//缓存
         //todo 我们单独的逻辑
-        $targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
-        header('location:'. $targetUrl); // 跳转到 user/profile
+        //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
+        $route = empty($_SESSION['route']) ? '/' : $_SESSION['route'];
+        //header('location:'. $targetUrl); // 跳转到 user/profile
+        return $this->redirect([$route]);
     }
 
 

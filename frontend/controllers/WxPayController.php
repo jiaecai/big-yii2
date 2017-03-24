@@ -85,8 +85,6 @@ class WxPayController extends Controller
      */
     public function actionMallIndex(){
 
-
-
         $wareList=array();
         return $this->render('mall_index', [
             'wareList' => $wareList,
