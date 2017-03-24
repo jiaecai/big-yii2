@@ -344,6 +344,8 @@ class WxController extends Controller
 
         //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
         //header('location:'. $targetUrl); // 跳转到 user/profile
+        var_dump($_COOKIE);
+        exit;
         $route = isset($_COOKIE['route']) ?  $_COOKIE['route'] :'/';
         var_dump($route);
         //return $this->redirect([$route]);

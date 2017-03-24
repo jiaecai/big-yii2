@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="">
+    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="ca">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/forms/EasyWechatForm.php" afterPath="$PROJECT_DIR$/common/forms/EasyWechatForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/WxController.php" afterPath="$PROJECT_DIR$/frontend/controllers/WxController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +26,8 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="342" column="22" lean-forward="true" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+            <state relative-caret-position="328">
+              <caret line="347" column="13" lean-forward="false" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="13" />
               <folding>
                 <element signature="e#39#47#0#PHP" expanded="true" />
                 <element signature="e#9922#10197#0#PHP" expanded="false" />
@@ -39,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/common/forms/EasyWechatForm.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
-              <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+              <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -719,7 +720,7 @@
       <workItem from="1489717608820" duration="2182000" />
       <workItem from="1489920100092" duration="13920000" />
       <workItem from="1490300662676" duration="10509000" />
-      <workItem from="1490340830251" duration="14844000" />
+      <workItem from="1490340830251" duration="14933000" />
     </task>
     <task id="LOCAL-00001" summary="fir update yii2">
       <created>1489577617507</created>
@@ -1001,11 +1002,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490372080323</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="ca">
+      <created>1490372521360</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1490372521360</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54942000" />
+    <option name="totallyTimeSpent" value="55031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1416,17 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="342" column="22" lean-forward="true" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
-          <folding>
-            <element signature="e#39#47#0#PHP" expanded="true" />
-            <element signature="e#9922#10197#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/wx-pay/ware_detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1451,10 +1448,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="347" column="13" lean-forward="false" selection-start-line="347" selection-start-column="13" selection-end-line="347" selection-end-column="13" />
+          <folding>
+            <element signature="e#39#47#0#PHP" expanded="true" />
+            <element signature="e#9922#10197#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/forms/EasyWechatForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
-          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
           <folding />
         </state>
       </provider>
