@@ -310,8 +310,6 @@ class WxController extends Controller
     public function actionPageNeedOauth(){
 
         $app = new Application(Yii::$app->params['WECHAT']);
-        //$response = $app->oauth->scopes(['snsapi_userinfo'])->redirect();//发起授权
-        //$response->send();
         $oauth = $app->oauth;
         // 未登录
         if (empty($_SESSION['wechat_user'])) {
@@ -324,7 +322,9 @@ class WxController extends Controller
         // 已经登录过
         $user = $_SESSION['wechat_user'];
         // ...
-        return $this->render('index');
+        return $this->render('index',[
+            'openId'=>$user->id
+        ]);
     }
 
 
