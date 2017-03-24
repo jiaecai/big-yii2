@@ -300,7 +300,7 @@ class WxController extends Controller
             return $oauth->redirect();
         }
         // 已经登录过
-        $user = $_SESSION['wechat_user'];
+        $user = $_COOKIE['wechat_user'];
         // ...
         return $this->render('index',[
             'openId'=>$user->id

@@ -46,9 +46,8 @@ class EasyWechatForm extends BaseForm
 
 
     /**
-     * 快速授权
      * @param string $reqRoute
-     * @return null
+     * @return bool
      */
     public static function quickOauth($reqRoute="/"){
         $app = new Application(Yii::$app->params['WECHAT']);
@@ -57,11 +56,12 @@ class EasyWechatForm extends BaseForm
         if (empty($_COOKIE['wechat_user'])) {
             //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
             $_COOKIE['route'] = $reqRoute;//'wx/page-need-oauth'; //需要授权的页面
-            //$oauth->redirect()->send();
+            $oauth->redirect()->send();
+            return false;
             // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
-            return $oauth->redirect();
+            //return $oauth->redirect();
         }else{
-            return null;
+            return true;
         }
     }
 
