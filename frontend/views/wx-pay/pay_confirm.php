@@ -15,7 +15,7 @@ $this->title = '支付确认';
         <div>
             <?=$wareId;?>
             <div>
-                <input name="button" id="btnPay" type="button" value="支付" />
+                <input name="button" id="btnPay" type="button" value="确认支付" />
             </div>
         </div>
 

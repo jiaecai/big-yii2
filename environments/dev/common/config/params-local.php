@@ -82,6 +82,11 @@ return [
                     "url"  => "http://www.soso.com/"
                 ],
                 [
+                    "type" => "view",
+                    "name" => "oauth",
+                    "url"  => 'http://www.youqu2015.com/big-yii2/frontend/web/index.php?r=wx/page-need-oauth'
+                ],
+                [
                     "type" => "click",
                     "name" => "click",
                     "key" => "click"

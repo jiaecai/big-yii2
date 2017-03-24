@@ -5,24 +5,10 @@ use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+use yii\helpers\Url;
 
 use EasyWeChat\Foundation\Application;
 use EasyWeChat\Message\Text;
-use EasyWeChat\Message\Image;
-use EasyWeChat\Message\Video;
-use EasyWeChat\Message\Voice;
-use EasyWeChat\Message\News;
-use EasyWeChat\Message\Article;
-use EasyWeChat\Support\Collection;
-use EasyWeChat\Message\Material;
-use common\forms\EasyWechatPayForm;
 
 /**
  * Site controller
@@ -110,9 +96,9 @@ class WxController extends Controller
             $app = new Application(Yii::$app->params['WECHAT']);
             $userService   = $app->user;
             $user = $userService->get($openId);
-            echo $user['nickname'];
-            $user->nickname;
-            $user->get('nickname');
+            //echo $user['nickname'];
+            //$user->nickname;
+            //$user->get('nickname');
             //修改用户备注
             //$userService->remark($openId, $remark); // 成功返回boolean
 
@@ -319,11 +305,26 @@ class WxController extends Controller
      * 需要授权的页面
      */
     public function actionPageNeedOauth(){
+
+        $app = new Application(Yii::$app->params['WECHAT']);
+        $response = $app->oauth->scopes(['snsapi_userinfo'])->redirect();//发起授权
+        $response->send();
+
+        $user = $app->oauth->user();
+        // $user 可以用的方法:
+        // $user->getId();  // 对应微信的 OPENID
+        // $user->getNickname(); // 对应微信的 nickname
+        // $user->getName(); // 对应微信的 nickname
+        // $user->getAvatar(); // 头像网址
+        // $user->getOriginal(); // 原始API返回的结果
+        // $user->getToken(); // access_token， 比如用于地址共享时使用
+
+
         $app = new Application(Yii::$app->params['WECHAT']);
         $oauth = $app->oauth;
         // 未登录
         if (empty($_SESSION['wechat_user'])) {
-            $_SESSION['target_url'] = 'user/profile';//需要授权的页面
+            $_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
             return $oauth->redirect();
             // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
             // $oauth->redirect()->send();
@@ -331,18 +332,20 @@ class WxController extends Controller
         // 已经登录过
         $user = $_SESSION['wechat_user'];
         // ...
-        return $this->redirect('index');
+        return $this->render('index');
     }
 
+
     /**
-     * 网页授权回调页
+     * 网页授权回调页[写死]
      */
     public function actionOauthCallback(){
         $app = new Application(Yii::$app->params['WECHAT']);
         $oauth = $app->oauth;
         // 获取 OAuth 授权结果用户信息
         $user = $oauth->user();
-        $_SESSION['wechat_user'] = $user->toArray();
+        $_SESSION['wechat_user'] = $user->toArray();//缓存
+        //todo 我们单独的逻辑
         $targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
         header('location:'. $targetUrl); // 跳转到 user/profile
     }
