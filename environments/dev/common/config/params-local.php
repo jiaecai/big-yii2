@@ -70,11 +70,11 @@ return [
     'WX_MENU' => [
         [
             "type" => "click",
-            "name" => "今日",
+            "name" => "click",
             "key"  => "click"
         ],
         [
-            "name"       => "菜单",
+            "name"       => "other",
             "sub_button" => [
                 [
                     "type" => "view",
@@ -87,9 +87,9 @@ return [
                     "url"  => 'http://www.youqu2015.com/big-yii2/frontend/web/index.php?r=wx/page-need-oauth'
                 ],
                 [
-                    "type" => "click",
-                    "name" => "click",
-                    "key" => "click"
+                    "type" => "view",
+                    "name" => "mall",
+                    "url"  => 'http://www.youqu2015.com/big-yii2/frontend/web/index.php?r=wx-pay/mall-index'
                 ],
                 [
                     "type" => "scancode_waitmsg",

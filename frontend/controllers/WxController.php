@@ -282,25 +282,6 @@ class WxController extends Controller
     }
 
 
-    /**
-     *
-     */
-    public function actionOauth(){
-        $app = new Application(Yii::$app->params['WECHAT']);
-        $response = $app->oauth->scopes(['snsapi_userinfo'])
-            ->redirect();
-        $response->send();
-        $user = $app->oauth->user();
-// $user 可以用的方法:
-// $user->getId();  // 对应微信的 OPENID
-// $user->getNickname(); // 对应微信的 nickname
-// $user->getName(); // 对应微信的 nickname
-// $user->getAvatar(); // 头像网址
-// $user->getOriginal(); // 原始API返回的结果
-// $user->getToken(); // access_token， 比如用于地址共享时使用
-
-    }
-
 
 
 
