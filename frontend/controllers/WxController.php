@@ -123,7 +123,7 @@ class WxController extends Controller
                         case "click":{//单击
                             switch ($message->EventKey) {
                                 case "click":{
-                                    $text = new Text(['content' => '您触发了点击事件']);
+                                    $text = new Text(['content' => '您触发了点击事件(openid='.$openId]);
                                     return $text;
                                     break;
                                 }
