@@ -288,7 +288,7 @@ class WxController extends Controller
     /**
      * 需要授权的页面
      */
-    public function actionPageNeedOauth($route=null){
+    public function actionPageNeedOauth(){
         $ret=\common\forms\EasyWechatForm::quickOauth('wx/page-need-oauth');
         if($ret){
             $user = $_COOKIE['wechat_user'];

@@ -53,7 +53,7 @@ class EasyWechatForm extends BaseForm
         $app = new Application(Yii::$app->params['WECHAT']);
         $oauth = $app->oauth;
         // 未登录
-        if (empty($_COOKIE['wechat_user'])) {
+        if (!isset($_COOKIE['wechat_user'])) {
             //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
             $_COOKIE['route'] = $reqRoute;//'wx/page-need-oauth'; //需要授权的页面
             $oauth->redirect()->send();
