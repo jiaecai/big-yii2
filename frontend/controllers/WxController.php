@@ -289,6 +289,17 @@ class WxController extends Controller
      * 需要授权的页面
      */
     public function actionPageNeedOauth($route=null){
+        $ret=\common\forms\EasyWechatForm::quickOauth('wx/page-need-oauth');
+        if($ret){
+            $user = $_COOKIE['wechat_user'];
+            // ...
+            return $this->render('index',[
+                'openId'=>$user->id
+            ]);
+        }else{
+            exit;
+        }
+        /*
         $app = new Application(Yii::$app->params['WECHAT']);
         $oauth = $app->oauth;
         // 未登录
@@ -305,6 +316,7 @@ class WxController extends Controller
         return $this->render('index',[
             'openId'=>$user->id
         ]);
+        */
     }
 
 
@@ -324,7 +336,10 @@ class WxController extends Controller
         // $user->getOriginal(); // 原始API返回的结果
         // $user->getToken(); // access_token， 比如用于地址共享时使用
 
-        $_COOKIE['wechat_user'] = $user->toArray();//缓存
+        session_id($user->id);
+        session_start();
+
+        //$_COOKIE['wechat_user'] = $user->toArray();//缓存
         //todo 我们单独的逻辑
 
         //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
