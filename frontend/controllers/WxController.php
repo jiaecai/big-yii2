@@ -317,9 +317,9 @@ class WxController extends Controller
         if (empty($_SESSION['wechat_user'])) {
             //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
             $_SESSION['route'] = 'wx/page-need-oauth'; //需要授权的页面
-            return $oauth->redirect();
+            $oauth->redirect()->send();
             // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
-            // $oauth->redirect()->send();
+            //return $oauth->redirect();
         }
         // 已经登录过
         $user = $_SESSION['wechat_user'];
@@ -346,9 +346,10 @@ class WxController extends Controller
 
         $_SESSION['wechat_user'] = $user->toArray();//缓存
         //todo 我们单独的逻辑
+
         //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
-        $route = empty($_SESSION['route']) ? '/' : $_SESSION['route'];
         //header('location:'. $targetUrl); // 跳转到 user/profile
+        $route = empty($_SESSION['route']) ? '/' : $_SESSION['route'];
         return $this->redirect([$route]);
     }
 
