@@ -22,7 +22,10 @@
         "yiisoft/yii2-redis": "^2.0",
         "flc/alidayu": "^2.0",
         "aliyuncs/oss-sdk-php": "^2.2",
-        "maxwen/yii2-easy-wechat": "^1.0"
+        "maxwen/yii2-easy-wechat": "^1.0",
+        "kartik-v/yii2-widgets": "*",
+        "bower-asset/echarts": "*",
+        "hisune/echarts-php": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
