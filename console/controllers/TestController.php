@@ -33,10 +33,13 @@ class TestController extends BaseConsoleController
        $js = $app->js;
 
        $easyWechatPayForm = new \common\forms\EasyWechatPayForm();
-       $prepayId=$easyWechatPayForm->createSingleWareOrder('wareId','url','openId');//蛋类商品下单
+       $url="https://www.baidu.com";
+       $openId="o7C_1wK0Mo6PBJg4KaVrhPf68od8";
+       $prepayId=$easyWechatPayForm->createSingleWareOrder('wareId',$url,$openId);//蛋类商品下单
 
        if($prepayId){
            $config = $payment->configForJSSDKPayment($prepayId);
+           echo "prepare成功，生成配置";
            var_dump($config);
        }else{
            echo "prepare失败";
