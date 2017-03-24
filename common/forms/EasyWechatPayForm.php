@@ -34,7 +34,7 @@ class EasyWechatPayForm extends BaseForm
             'out_trade_no'     => '1217752501201407033233368018',
             'total_fee'        => 5388, // 单位：分
             //通知url必须为直接可访问的url，不能携带参数。示例：
-            //'notify_url'       => 'http://xxx.com/order-notify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'notify_url'       => $notifyUrl,//'http://xxx.com/order-notify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'openid'           => $openId, // trade_type=JSAPI，此参数必传，用户在商户appid下的唯一标识，
             // ...
         ];
@@ -45,7 +45,7 @@ class EasyWechatPayForm extends BaseForm
         //公众号支付、扫码支付、APP 支付 都统一使用此接口完成订单的创建。
         try{
             $result = $payment->prepare($order);
-            echo "prepare成功";
+            //echo "prepare成功";
 
             if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
                 $prepayId = $result->prepay_id;
