@@ -55,7 +55,10 @@ class EasyWechatForm extends BaseForm
         // 未登录
         if (!isset($_COOKIE['wechat_user'])) {
             //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
+
             $_COOKIE['route'] = $reqRoute;//'wx/page-need-oauth'; //需要授权的页面
+            var_dump($_COOKIE['route']);
+            exit;
             $oauth->redirect()->send();
             return false;
             // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
