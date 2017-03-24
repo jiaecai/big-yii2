@@ -44,24 +44,21 @@ class EasyWechatPayForm extends BaseForm
 
         //公众号支付、扫码支付、APP 支付 都统一使用此接口完成订单的创建。
         try{
-            echo "herer";
             $result = $payment->prepare($order);
+            echo "prepare成功";
+
+            if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
+                $prepayId = $result->prepay_id;
+                return $prepayId;
+                //return $prepayId;
+            }else{
+                var_dump($result);
+                //die("出错了。");  // 出错就说出来，不然还能怎样？
+            }
         }catch (\Exception $e){
-            echo "here1";
             var_dump($e);
         }
-
-        echo "here";
-        exit;
-
-        if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
-            $prepayId = $result->prepay_id;
-            return $prepayId;
-            //return $prepayId;
-        }else{
-            var_dump($result);
-            die("出错了。");  // 出错就说出来，不然还能怎样？
-        }
+        return null;
     }
 
 

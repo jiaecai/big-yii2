@@ -30,13 +30,20 @@ class TestController extends BaseConsoleController
 
        $app = new Application(Yii::$app->params['WECHAT']);
        $payment = $app->payment;
+       $js = $app->js;
 
        $easyWechatPayForm = new \common\forms\EasyWechatPayForm();
        $prepayId=$easyWechatPayForm->createSingleWareOrder('wareId','url','openId');//蛋类商品下单
 
-       $config = $payment->configForJSSDKPayment($prepayId);
+       if($prepayId){
+           $config = $payment->configForJSSDKPayment($prepayId);
+           var_dump($config);
+       }else{
+           echo "prepare失败";
+       }
+
        // 这个方法是取得js里支付所必须的参数用的。 没这个啥也做不了，除非你自己把js的参数生成一遍
-       $js = $app->js;
+
 
        /*
        return $this->render('pay_confirm', [

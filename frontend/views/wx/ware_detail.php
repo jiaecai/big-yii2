@@ -19,16 +19,6 @@ $this->title = '商品详情';
 
         <?= Html::a('确认支付', ['pay-confirm', 'wareId' => $wareId], ['class' => 'btn btn-primary']) ?>
 
-        <div>
-            <div>
-                <form name="form1" action="payment.php" method="post">
-                    <lable>数量：</lable>
-                    <input name="qty" value="1" />
-                    <input name="submit" type="submit" value="确认支付" />
-                </form>
-            </div>
-        </div>
-
     </div>
 </div>
 

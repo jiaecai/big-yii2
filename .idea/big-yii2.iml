@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/aliyuncs/oss-sdk-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/behat/gherkin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower/bootstrap3-dialog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower/echarts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower/jquery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bower/jquery.inputmask" />
@@ -15,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/verify" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/creocoder/yii2-nested-sets" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -27,7 +29,15 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-fileinput" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-star-rating" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/dependent-dropdown" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-detail-view" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-dialog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-export" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-grid" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-helpers" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-tree-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-activeform" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-affix" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-alert" />
@@ -49,12 +59,14 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widgets" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maxwen/yii2-easy-wechat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/overtrue/wechat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoffice/phpexcel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/php-diff" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
@@ -77,6 +89,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
@@ -102,16 +115,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
-        </CLASSES>
-        <SOURCES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
           <root url="phar://$MODULE_DIR$/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
@@ -129,6 +132,7 @@
           <root url="file://$MODULE_DIR$/vendor/aliyuncs/oss-sdk-php" />
           <root url="file://$MODULE_DIR$/vendor/behat/gherkin" />
           <root url="file://$MODULE_DIR$/vendor/bower/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower/bootstrap3-dialog" />
           <root url="file://$MODULE_DIR$/vendor/bower/echarts" />
           <root url="file://$MODULE_DIR$/vendor/bower/jquery" />
           <root url="file://$MODULE_DIR$/vendor/bower/jquery.inputmask" />
@@ -139,6 +143,7 @@
           <root url="file://$MODULE_DIR$/vendor/codeception/base" />
           <root url="file://$MODULE_DIR$/vendor/codeception/verify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/creocoder/yii2-nested-sets" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -151,7 +156,15 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-fileinput" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-star-rating" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/dependent-dropdown" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-builder" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-detail-view" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-dialog" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-export" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-grid" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-helpers" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-mpdf" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-tree-manager" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-activeform" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-affix" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-alert" />
@@ -173,12 +186,14 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widgets" />
           <root url="file://$MODULE_DIR$/vendor/maxwen/yii2-easy-wechat" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
           <root url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
           <root url="file://$MODULE_DIR$/vendor/overtrue/socialite" />
           <root url="file://$MODULE_DIR$/vendor/overtrue/wechat" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpexcel" />
           <root url="file://$MODULE_DIR$/vendor/phpspec/php-diff" />
           <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
@@ -201,6 +216,7 @@
           <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
           <root url="file://$MODULE_DIR$/vendor/symfony/console" />
@@ -227,6 +243,7 @@
           <root url="file://$MODULE_DIR$/vendor/aliyuncs/oss-sdk-php" />
           <root url="file://$MODULE_DIR$/vendor/behat/gherkin" />
           <root url="file://$MODULE_DIR$/vendor/bower/bootstrap" />
+          <root url="file://$MODULE_DIR$/vendor/bower/bootstrap3-dialog" />
           <root url="file://$MODULE_DIR$/vendor/bower/echarts" />
           <root url="file://$MODULE_DIR$/vendor/bower/jquery" />
           <root url="file://$MODULE_DIR$/vendor/bower/jquery.inputmask" />
@@ -237,6 +254,7 @@
           <root url="file://$MODULE_DIR$/vendor/codeception/base" />
           <root url="file://$MODULE_DIR$/vendor/codeception/verify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/creocoder/yii2-nested-sets" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/cache" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -249,7 +267,15 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-fileinput" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-star-rating" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/dependent-dropdown" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-builder" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-detail-view" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-dialog" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-export" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-grid" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-helpers" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-mpdf" />
+          <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-tree-manager" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-activeform" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-affix" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-alert" />
@@ -271,12 +297,14 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widgets" />
           <root url="file://$MODULE_DIR$/vendor/maxwen/yii2-easy-wechat" />
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
           <root url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
           <root url="file://$MODULE_DIR$/vendor/overtrue/socialite" />
           <root url="file://$MODULE_DIR$/vendor/overtrue/wechat" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpexcel" />
           <root url="file://$MODULE_DIR$/vendor/phpspec/php-diff" />
           <root url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
@@ -299,6 +327,7 @@
           <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
           <root url="file://$MODULE_DIR$/vendor/symfony/console" />
