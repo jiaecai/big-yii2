@@ -8,7 +8,7 @@ $this->title = 'My Yii Application';
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
-        <p><?=$openId;?></p>
+        <p>openid=<?=$openId;?></p>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
