@@ -67,30 +67,30 @@ return [
     'WX_MENU' => [
         [
             "type" => "click",
-            "name" => "今日歌曲",
+            "name" => "我们在测试",
             "key"  => "click"
         ],
         [
-            "name"       => "菜单",
+            "name"       => "精彩马上回",
             "sub_button" => [
                 [
                     "type" => "view",
-                    "name" => "搜索",
+                    "name" => "view",
                     "url"  => "http://www.soso.com/"
                 ],
                 [
                     "type" => "view",
-                    "name" => "视频",
-                    "url"  => "http://v.qq.com/"
+                    "name" => "oauth",
+                    "url"  => 'http://www.youqu2015.com/big-yii2/frontend/web/index.php?r=wx/page-need-oauth'
                 ],
                 [
-                    "type" => "click",
-                    "name" => "赞一下我们",
-                    "key" => "V1001_GOOD"
+                    "type" => "view",
+                    "name" => "mall",
+                    "url"  => 'http://www.youqu2015.com/big-yii2/frontend/web/index.php?r=wx-pay/mall-index'
                 ],
                 [
                     "type" => "scancode_waitmsg",
-                    "name" => "扫码",
+                    "name" => "scan",
                     "key" => "scan_qr"
                 ],
             ],

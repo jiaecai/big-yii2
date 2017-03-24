@@ -70,11 +70,11 @@ return [
     'WX_MENU' => [
         [
             "type" => "click",
-            "name" => "click",
+            "name" => "我们在测试",
             "key"  => "click"
         ],
         [
-            "name"       => "other",
+            "name"       => "精彩马上回",
             "sub_button" => [
                 [
                     "type" => "view",
