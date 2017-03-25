@@ -135,6 +135,7 @@ class WxController extends Controller
                             }
                             break;
                         }
+                        case "LOCATION":
                         case "location":{//上报位置
                             # 上报地理位置事件
                             $message->Latitude;    #23.137466   地理位置纬度
