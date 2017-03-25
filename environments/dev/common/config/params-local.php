@@ -47,8 +47,8 @@ return [
          * 微信支付
          */
         'payment' => [
-            'merchant_id'        => 'YOURS',
-            'key'                => 'YOURS',
+            'merchant_id'        => '1321478301',
+            'key'                => 'youqusaishi20171youqusaishi20171',
             'cert_path'          => 'path/to/your/cert.pem', // XXX: 绝对路径！！！！
             'key_path'           => 'path/to/your/key',      // XXX: 绝对路径！！！！
             // 'device_info'     => '013467007045764',

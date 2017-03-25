@@ -53,7 +53,7 @@ class WxController extends Controller
         //$message->MsgId;         #消息 ID（64位整型）
 
         $server->setMessageHandler(function ($message) use ($user) {
-            return new Text(['content' => "TEST"]);;
+            return new Text(['content' => "TEST"]);
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
 
             //todo 自己的逻辑
