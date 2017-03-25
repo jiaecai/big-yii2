@@ -238,11 +238,11 @@ class WxController extends Controller
                 }
                 // ... 其它消息
                 default:{
-                    //return '收到其它消息:'.$message->MsgType;
+                    return '收到其它消息:'.$message->MsgType;
                     break;
                 }
             }
-            return true;
+            return "SUCCESS";
         });
         $response = $server->serve();
         $response->send(); // Laravel 里请使用：return $response;
