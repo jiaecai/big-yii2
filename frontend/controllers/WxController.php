@@ -224,7 +224,7 @@ class WxController extends Controller
                 }
                 // ... 其它消息
                 default:{
-                    return '收到其它消息:'.$message->MsgType;
+                    //return '收到其它消息:'.$message->MsgType;
                     break;
                 }
             }

@@ -25,8 +25,8 @@
       <file leaf-file-name="WxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="185">
+              <caret line="226" column="22" lean-forward="false" selection-start-line="226" selection-start-column="22" selection-end-line="226" selection-end-column="22" />
               <folding>
                 <element signature="e#39#47#0#PHP" expanded="true" />
                 <element signature="e#6761#7537#0#PHP" expanded="false" />
@@ -641,14 +641,7 @@
       <workItem from="1490340830251" duration="27391000" />
       <workItem from="1490418095228" duration="16000" />
       <workItem from="1490418283659" duration="112000" />
-      <workItem from="1490418419121" duration="20965000" />
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1490300978965</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1490300978965</updated>
+      <workItem from="1490418419121" duration="21201000" />
     </task>
     <task id="LOCAL-00013" summary="update">
       <created>1490312124569</created>
@@ -986,11 +979,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490450180114</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="update">
+      <created>1490450273304</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1490450273304</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88582000" />
+    <option name="totallyTimeSpent" value="88818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1392,8 +1392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        <state relative-caret-position="185">
+          <caret line="226" column="22" lean-forward="false" selection-start-line="226" selection-start-column="22" selection-end-line="226" selection-end-column="22" />
           <folding>
             <element signature="e#39#47#0#PHP" expanded="true" />
             <element signature="e#6761#7537#0#PHP" expanded="false" />
