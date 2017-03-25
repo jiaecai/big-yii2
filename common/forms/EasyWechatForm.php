@@ -48,7 +48,7 @@ class EasyWechatForm extends BaseForm
      * @param $url
      * @param $dataArray
      */
-    public function sendTempMsg($openId,$tempId,$url,$dataArray){
+    public static function sendTempMsg($openId,$tempId,$url,$dataArray){
         $app = new Application(Yii::$app->params['WECHAT']);
         $notice = $app->notice;
 

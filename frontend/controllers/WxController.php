@@ -143,7 +143,13 @@ class WxController extends Controller
                             $message->Ticket;      #二维码的 ticket，可用来换取二维码图片
                             # 扫描带参数二维码事件
                             $scanResult=$message->ScanCodeInfo->ScanResult;
+                            /**
+                             * todo
+                             */
                             switch ($message->EventKey){
+                                /**
+                                 * todo
+                                 */
                                 case "scan_qr":{
                                     $text = new Text(['content' => $scanResult]);
                                     return $text;

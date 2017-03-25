@@ -45,18 +45,18 @@ class TestController extends BaseConsoleController
        }else{
            echo "prepare失败";
        }
+   }
 
-       // 这个方法是取得js里支付所必须的参数用的。 没这个啥也做不了，除非你自己把js的参数生成一遍
-
-
-       /*
-       return $this->render('pay_confirm', [
-           'config' => $config,
-           'js' => $js,
-           'wareId' => $wareId,
-       ]);
-       */
-
+    /**
+     * 短信测试样例
+     */
+   public function actionSendSms($recNum="18810359625"){
+       $params=[
+           'time' => "时间",
+            'address' => "地点"
+       ];
+       $ret=\common\util\NotificationUtil::sendSms($recNum,"SMS_13191310",$params,'大鱼测试');
+       var_dump($ret);
    }
 
 }
