@@ -283,18 +283,16 @@ class WxController extends Controller
 
 
 
-
-
     /**
      * 需要授权的页面
      */
     public function actionPageNeedOauth(){
         $ret=\common\forms\EasyWechatForm::quickOauth('wx/page-need-oauth');
         if($ret){
-            $user = $_COOKIE['wechat_user'];
+            $userArray = json_decode($_COOKIE['wechat_user'],true);
             // ...
             return $this->render('index',[
-                'openId'=>$user->id,
+                'openId'=>$userArray['id'],
             ]);
         }else{
             exit;
@@ -318,12 +316,10 @@ class WxController extends Controller
         // $user->getOriginal(); // 原始API返回的结果
         // $user->getToken(); // access_token， 比如用于地址共享时使用
 
-        var_dump($user->toArray());
-        exit;
-        //缓存身份
-        setcookie('wechat_user',$user->toArray(),time()+3600*24);
+        //TODO 需要更新的部分,也有可能用REDIS来更新,我们单独的逻辑
 
-        //todo 我们单独的逻辑
+        //缓存身份
+        setcookie('wechat_user',json_encode($user->toArray()),time()+3600*24);
 
         //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
         //header('location:'. $targetUrl); // 跳转到 user/profile

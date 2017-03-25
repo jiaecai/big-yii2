@@ -89,12 +89,12 @@ class WxPayController extends Controller
 
         if($ret){
             // 已经登录过
-            $user = $_COOKIE['wechat_user'];
+            $userArray = json_decode($_COOKIE['wechat_user'],true);
             // ...
             $wareList=array();
             return $this->render('mall_index', [
                 'wareList' => $wareList,
-                'openId' => $user->id,
+                'openId' => $userArray['id'],
             ]);
         }else{
             exit;
