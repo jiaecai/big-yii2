@@ -56,8 +56,12 @@ class EasyWechatForm extends BaseForm
         if (!isset($_COOKIE['wechat_user'])) {
             //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
 
-            $_COOKIE['route'] = $reqRoute;//'wx/page-need-oauth'; //需要授权的页面
+            setcookie('route',$reqRoute,time()+3600*24);
+            //$_COOKIE['route'] = $reqRoute;//'wx/page-need-oauth'; //需要授权的页面
             //var_dump($_COOKIE['route']);
+
+            //todo 问题在于这里的没有被记录下来
+
             //exit;
             $oauth->redirect()->send();
             return false;

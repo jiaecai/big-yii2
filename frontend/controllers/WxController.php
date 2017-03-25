@@ -294,29 +294,11 @@ class WxController extends Controller
             $user = $_COOKIE['wechat_user'];
             // ...
             return $this->render('index',[
-                'openId'=>$user->id
+                'openId'=>$user->id,
             ]);
         }else{
             exit;
         }
-        /*
-        $app = new Application(Yii::$app->params['WECHAT']);
-        $oauth = $app->oauth;
-        // 未登录
-        if (empty($_COOKIE['wechat_user'])) {
-            //$_SESSION['target_url'] = Url::to(['wx/page-need-oauth']); //需要授权的页面
-            $_COOKIE['route'] = 'wx/page-need-oauth'; //需要授权的页面
-            //$oauth->redirect()->send();
-            // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
-            return $oauth->redirect();
-        }
-        // 已经登录过
-        $user = $_COOKIE['wechat_user'];
-        // ...
-        return $this->render('index',[
-            'openId'=>$user->id
-        ]);
-        */
     }
 
 
@@ -336,19 +318,16 @@ class WxController extends Controller
         // $user->getOriginal(); // 原始API返回的结果
         // $user->getToken(); // access_token， 比如用于地址共享时使用
 
-        //session_id($user->id);
-        //session_start();
+        //缓存身份
+        setcookie('wechat_user',$user->toArray(),time()+3600*24);
 
-        $_COOKIE['wechat_user'] = $user->toArray();//缓存
         //todo 我们单独的逻辑
 
         //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
         //header('location:'. $targetUrl); // 跳转到 user/profile
-        var_dump($_COOKIE);
-        exit;
         $route = isset($_COOKIE['route']) ?  $_COOKIE['route'] :'/';
-        var_dump($route);
-        //return $this->redirect([$route]);
+        //var_dump($route);
+        return $this->redirect([$route]);
     }
 
 
