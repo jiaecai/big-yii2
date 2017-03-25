@@ -41,8 +41,7 @@ class WxController extends Controller
     public function actionHandle(){
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
-
-        //$userService   = $app->user;
+        $user   = $app->user;
         //$message = $server->getMessage();
         //$user = $userService->get($openId);
         //echo $user['nickname'];
@@ -53,8 +52,8 @@ class WxController extends Controller
         //$message->CreateTime;    #消息创建时间（时间戳）
         //$message->MsgId;         #消息 ID（64位整型）
 
-        $server->setMessageHandler(function ($message) {
-            return "TEST";
+        $server->setMessageHandler(function ($message) use ($user) {
+            return new Text(['content' => "TEST"]);;
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
 
             //todo 自己的逻辑
@@ -247,9 +246,7 @@ class WxController extends Controller
             }
             return "SUCCESS";
         });
-        $response = $server->serve();
-        $response->send(); // Laravel 里请使用：return $response;
-        //return $response;
+        $server->serve()->send();
     }
 
 
