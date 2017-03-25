@@ -42,19 +42,19 @@ class WxController extends Controller
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
 
+        //$userService   = $app->user;
+        //$message = $server->getMessage();
+        //$user = $userService->get($openId);
+        //echo $user['nickname'];
+        //修改用户备注
+        //$userService->remark($openId, $remark); // 成功返回boolean
+
+        //$message->ToUserName;    #接收方帐号（该公众号 ID）
+        //$message->CreateTime;    #消息创建时间（时间戳）
+        //$message->MsgId;         #消息 ID（64位整型）
+
         $server->setMessageHandler(function ($message) {
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
-
-            $app = new Application(Yii::$app->params['WECHAT']);
-            $userService   = $app->user;
-            $user = $userService->get($openId);
-            //echo $user['nickname'];
-            //修改用户备注
-            //$userService->remark($openId, $remark); // 成功返回boolean
-
-            $message->ToUserName;    #接收方帐号（该公众号 ID）
-            $message->CreateTime;    #消息创建时间（时间戳）
-            $message->MsgId;         #消息 ID（64位整型）
 
             //todo 自己的逻辑
 
