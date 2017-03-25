@@ -134,7 +134,6 @@ class EasyWechatPayForm extends BaseForm
         $response->send(); // Laravel 里请使用：return $response;
     }
 
-
     /**
      * 下载对账单
      */
