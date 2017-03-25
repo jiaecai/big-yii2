@@ -54,6 +54,7 @@ class WxController extends Controller
         //$message->MsgId;         #消息 ID（64位整型）
 
         $server->setMessageHandler(function ($message) {
+            return "TEST";
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
 
             //todo 自己的逻辑
@@ -121,6 +122,8 @@ class WxController extends Controller
                                     break;
                                 }
                                 default:{
+                                    $text = new Text(['content' => '未知的事件KEY类型：'.$message->EventKey]);
+                                    return $text;
                                     break;
                                 }
                             }
