@@ -16,26 +16,7 @@ use \EasyWeChat\Message\News;
  */
 class WxController extends Controller
 {
-
-    public $enableCsrfValidation = false;
-
-    /**
-     * @inheritdoc
-     */
-    /*
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-    */
+    public $enableCsrfValidation = false;//会影响POST数据！！//非常关键！微信的话这里一定要关掉！
 
 
     /**
@@ -46,20 +27,18 @@ class WxController extends Controller
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
         $user   = $app->user;
-        //$message = $server->getMessage();
-        //$user = $userService->get($openId);
+        $message = $server->getMessage();
         //echo $user['nickname'];
         //修改用户备注
-        //$userService->remark($openId, $remark); // 成功返回boolean
+        //$user->remark($openId, $remark); // 成功返回boolean
 
         //$message->ToUserName;    #接收方帐号（该公众号 ID）
         //$message->CreateTime;    #消息创建时间（时间戳）
         //$message->MsgId;         #消息 ID（64位整型）
 
         $server->setMessageHandler(function ($message) use ($user) {
-            return new Text(['content' => 'TEST']);
             $fromUser = $user->get($message->FromUserName);
-            $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
+            $openId=$fromUser['id'];  # 发送方帐号（OpenID, 代表用户的唯一标识）
 
             //todo 自己的逻辑
 
