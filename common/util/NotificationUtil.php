@@ -48,8 +48,8 @@ class NotificationUtil{
      * @param $url
      * @param $dataArray
      */
-    public static function sendWxTempMsg($openId,$tempId,$url,$dataArray){
-        return \common\forms\EasyWechatForm::sendTempMsg($openId,$tempId,$url,$dataArray);
+    public static function sendWxTempMsg($openId,$tempId,$dataArray,$url=null){
+        return \common\forms\EasyWechatForm::sendTempMsg($openId,$tempId,$dataArray,$url);
     }
 
 }

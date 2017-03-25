@@ -22,6 +22,7 @@ class EasyWechatForm extends BaseForm
 
 
     /**
+     * 授权
      * @param string $reqRoute
      * @return bool
      */
@@ -45,10 +46,11 @@ class EasyWechatForm extends BaseForm
      * 发送模板消息
      * @param $openId
      * @param $tempId
-     * @param $url
      * @param $dataArray
+     * @param null $url
+     * @return \EasyWeChat\Support\Collection
      */
-    public static function sendTempMsg($openId,$tempId,$url,$dataArray){
+    public static function sendTempMsg($openId,$tempId,$dataArray,$url=null){
         $app = new Application(Yii::$app->params['WECHAT']);
         $notice = $app->notice;
 
@@ -74,6 +76,9 @@ class EasyWechatForm extends BaseForm
         ]);
 
         var_dump($messageId);
+
+        return $messageId;
+
         /*
         $result = $notice->uses($templateId)->withUrl($url)->andData($data)->andReceiver($userId)->send();
         var_dump($result);

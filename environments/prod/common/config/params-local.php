@@ -46,8 +46,8 @@ return [
         'payment' => [
             'merchant_id'        => '1321478301',
             'key'                => 'youqusaishi20171youqusaishi20171',
-            'cert_path'          => 'path/to/your/cert.pem', // XXX: 绝对路径！！！！
-            'key_path'           => 'path/to/your/key',      // XXX: 绝对路径！！！！
+            'cert_path'          => '/usr/share/nginx/html/big-yii2/common/sdk/wechat_pay/cert/mine/apiclient_cert.pem', // XXX: 绝对路径！！！！
+            'key_path'           => '/usr/share/nginx/html/big-yii2/common/sdk/wechat_pay/cert/mine/apiclient_key.pem',      // XXX: 绝对路径！！！！
             // 'device_info'     => '013467007045764',
             // 'sub_app_id'      => '',
             // 'sub_merchant_id' => '',

@@ -59,4 +59,24 @@ class TestController extends BaseConsoleController
        var_dump($ret);
    }
 
+    /**
+     * 发送微信模板消息
+     */
+   public function actionSendWxTempMsg(){
+       $openId="o8h3Rs6LrUVB-MuH4skeMtzEyRZ0";//我的生产号
+       $tempId="mASH0i62CLxQLsWCizJIA3MWpn5-osHN0fmnoRpXNt0";//注册成功的模板
+       //$url="https://www.baidu.com";
+       $url=null;//"https://www.baidu.com";
+
+       $dataArray=array();
+       $dataArray['first']=array("first", '#555555');
+       $dataArray['keyword1']="keyword1";
+       $dataArray['keyword2']="keyword2";
+       $dataArray['keyword3']="keyword3";
+
+       $ret=\common\util\NotificationUtil::sendWxTempMsg($openId,$tempId,$dataArray,$url);
+       var_dump($ret);
+
+   }
+
 }
