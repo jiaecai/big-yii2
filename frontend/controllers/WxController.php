@@ -38,7 +38,7 @@ class WxController extends Controller
 
         $server->setMessageHandler(function ($message) use ($user) {
             $fromUser = $user->get($message->FromUserName);
-            $openId=$fromUser['id'];  # 发送方帐号（OpenID, 代表用户的唯一标识）
+            $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
 
             //todo 自己的逻辑
 
