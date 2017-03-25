@@ -67,13 +67,13 @@ return [
         ],
     ],
 
-    'WX_MENU' => [
-        [
+    'WX_MENU' => array(
+        array(
             "type" => "click",
             "name" => "我们在测试",
             "key"  => "click"
-        ],
-        [
+        ),
+        array(
             "name"       => "精彩马上回",
             "sub_button" => [
                 [
@@ -97,8 +97,8 @@ return [
                     "key" => "scan_qr"
                 ],
             ],
-        ],
-    ],
+        ),
+    ),
 
     //个性化菜单
     'WX_MENU_MATCH' => [

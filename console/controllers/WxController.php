@@ -26,13 +26,16 @@ class WxController extends BaseConsoleController
        $app = new Application(Yii::$app->params['WECHAT']);
        $menu = $app->menu;
 
+       $ret=$menu->add(Yii::$app->params['WX_MENU']);
+       var_dump($ret);
+
        //查询菜单
        $menus = $menu->all();
+        var_dump($menus['menu']['button']);
 
        //获取自定义菜单
-       $menus = $menu->current();
-
-       $menu->add(Yii::$app->params['WX_MENU']);
+       //$menus = $menu->current();
+       var_dump($menus['selfmenu_info']);
 
        //个性化菜单
        //$menu->add(Yii::$app->params['WX_MENU'], Yii::$app->params['WX_MENU_MATCH']);
