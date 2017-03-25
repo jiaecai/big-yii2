@@ -9,44 +9,13 @@ use yii\helpers\Url;
 
 use EasyWeChat\Foundation\Application;
 use EasyWeChat\Message\Text;
+use \EasyWeChat\Message\News;
 
 /**
  * Site controller
  */
 class WxController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    /*
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
-                'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-    */
 
     /**
      * @inheritdoc
@@ -84,46 +53,39 @@ class WxController extends Controller
     public function actionHandle(){
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
-        //$userService   = $app->user;
-        //$oauth  = $app->oauth;
 
         $server->setMessageHandler(function ($message) {
-            $message->ToUserName;    #接收方帐号（该公众号 ID）
             $openId=$message->FromUserName;  # 发送方帐号（OpenID, 代表用户的唯一标识）
-            $message->CreateTime;    #消息创建时间（时间戳）
-            $message->MsgId;         #消息 ID（64位整型）
 
             $app = new Application(Yii::$app->params['WECHAT']);
             $userService   = $app->user;
             $user = $userService->get($openId);
             //echo $user['nickname'];
-            //$user->nickname;
-            //$user->get('nickname');
             //修改用户备注
             //$userService->remark($openId, $remark); // 成功返回boolean
+
+            $message->ToUserName;    #接收方帐号（该公众号 ID）
+            $message->CreateTime;    #消息创建时间（时间戳）
+            $message->MsgId;         #消息 ID（64位整型）
+
+            //todo 自己的逻辑
 
             switch ($message->MsgType) {// 消息类型：event, text....
                 case 'event':{
                     switch ($message->Event) {
                         case "SUBSCRIBE":
                         case 'subscribe':{//订阅
-                            # code...
-                            $text = new Text(['content' => '欢迎订阅BIG-YII2!'.$message->Event]);
-                            return $text;
+                            return \common\forms\WechatForm::respSubscribe($openId);
                         }
                         case "unsubscribe":{//取消订阅
-                            break;
-                        }
-                        case "location":{//上报位置
-                            # 上报地理位置事件
-                            $message->Latitude;    #23.137466   地理位置纬度
-                            $message->Longitude;   #113.352425  地理位置经度
-                            $message->Precision;   #119.385040  地理位置精度
                             break;
                         }
                         case "CLICK":
                         case "click":{//单击
                             switch ($message->EventKey) {
+                                /**
+                                 * todo 补充自己的事件
+                                 */
                                 case "CLICK":
                                 case "click":{
                                     $text = new Text(['content' => '您触发了点击事件(openid='.$openId]);
@@ -132,16 +94,18 @@ class WxController extends Controller
                                 }
                                 case "event_demo":{
                                     //图文消息
-                                    /*
+                                    $title="Title";
+                                    $description="Description";
+                                    $url="https://www.baidu.com";
+                                    //$url=Yii::$app->urlManager->createAbsoluteUrl(['account-log/all-no-payed'])
                                     $news = new News([
                                         'title'       => $title,
-                                        'description' => '...',
+                                        'description' => $description,
                                         'url'         => $url,
-                                        'image'       => $image,
+                                        'image'       => "http://discuz.comli.com/weixin/weather/icon/cartoon.jpg",
                                         // ...
                                     ]);
                                     return $news;
-                                    */
                                     //return [$news1, $news2, $news3, $news4];
                                     break;
                                 }
@@ -174,9 +138,10 @@ class WxController extends Controller
                             }
                             break;
                         }
+
                         case "scancode_waitmsg":{//扫码返回
+                            $message->Ticket;      #二维码的 ticket，可用来换取二维码图片
                             # 扫描带参数二维码事件
-                            //$message->EventKey;    #事件KEY值，比如：qrscene_123123，qrscene_为前缀，后面为二维码的参数值
                             $scanResult=$message->ScanCodeInfo->ScanResult;
                             switch ($message->EventKey){
                                 case "scan_qr":{
@@ -184,9 +149,23 @@ class WxController extends Controller
                                     return $text;
                                     break;
                                 }
-                                default:break;
+                                default:{
+                                    break;
+                                }
                             }
-                            $message->Ticket;      #二维码的 ticket，可用来换取二维码图片
+                            break;
+                        }
+                        case "location":{//上报位置
+                            # 上报地理位置事件
+                            $message->Latitude;    #23.137466   地理位置纬度
+                            $message->Longitude;   #113.352425  地理位置经度
+                            $message->Precision;   #119.385040  地理位置精度
+
+                            $message->Location_X;  //地理位置纬度
+                            $message->Location_Y;  #地理位置经度
+                            $message->Scale;       #地图缩放大小
+                            $message->Label;       #地理位置信息
+                            return \common\forms\WechatForm::respLocation($openId);
                             break;
                         }
                         default:{
@@ -196,19 +175,18 @@ class WxController extends Controller
                             break;
                         }
                     }
-                    return '收到事件消息';
                     break;
                 }
-                case 'text':
+                case 'text':{
                     switch ($message->Content){
                         case "关键词1":{
                             $text = new Text(['content' => '您好！overtrue。我们已经收到您的消息']);
                             return $text;
                             break;
                         }
-                        case "关键词2":{
-                            break;
-                        }
+                        /**
+                         * TODO 自己的文字
+                         */
                         default:{//其他消息都通过多客服消息转发
                             $transfer = new \EasyWeChat\Message\Transfer();
                             //转发给指定客服
@@ -217,6 +195,8 @@ class WxController extends Controller
                         }
                     }
                     break;
+                }
+
                 case 'image':{
                     $message->PicUrl;   #图片链接
                     //$text = new Image(['media_id' => $mediaId]);
@@ -228,7 +208,7 @@ class WxController extends Controller
                     $message->MediaId;        #语音消息媒体id，可以调用多媒体文件下载接口拉取数据。
                     $message->Format;         #语音格式，如 amr，speex 等
                     $message->Recognition;    #* 开通语音识别后才有
-                    //$voice = new Voice(['media_id' => $mediaId]);
+                    $voice = new \EasyWeChat\Message\Voice(['media_id' => $message->MediaId]);
                     return '收到语音消息';
                     break;
                 case 'video':{
@@ -251,13 +231,7 @@ class WxController extends Controller
                     return '收到小视频消息';
                     break;
                 }
-                case 'location':{
-                    $message->Location_X;  //地理位置纬度
-                    $message->Location_Y;  #地理位置经度
-                    $message->Scale;       #地图缩放大小
-                    $message->Label;       #地理位置信息
-                //微信不支持回复位置消息
-                    return '收到坐标消息';
+                case "transfer_customer_service":{//客服消息
                     break;
                 }
                 case 'link':{
@@ -270,7 +244,7 @@ class WxController extends Controller
                 }
                 // ... 其它消息
                 default:{
-                    return '收到其它消息';
+                    return '收到其它消息:'.$message->MsgType;
                     break;
                 }
             }
@@ -282,9 +256,9 @@ class WxController extends Controller
     }
 
 
-
     /**
-     * 需要授权的页面
+     * 需要授权的页面 DEMO
+     * @return string
      */
     public function actionPageNeedOauth(){
         $ret=\common\forms\EasyWechatForm::quickOauth('wx/page-need-oauth');
@@ -301,13 +275,19 @@ class WxController extends Controller
 
 
     /**
-     * 网页授权回调页[写死]
+     * 网页授权回调页
+     * @return \yii\web\Response
      */
     public function actionOauthCallback(){
         $app = new Application(Yii::$app->params['WECHAT']);
+        $user = $app->oauth->user();// 获取 OAuth 授权结果用户信息
 
-        // 获取 OAuth 授权结果用户信息
-        $user = $app->oauth->user();
+        //TODO 需要更新的部分,也有可能用REDIS来更新,单独的逻辑
+
+        setcookie('wechat_user',json_encode($user->toArray()),time()+3600*24);//缓存身份
+        $route = isset($_COOKIE['route']) ?  $_COOKIE['route'] :'/';
+        return $this->redirect([$route]);
+
         // $user 可以用的方法:
         // $user->getId();  // 对应微信的 OPENID
         // $user->getNickname(); // 对应微信的 nickname
@@ -315,17 +295,6 @@ class WxController extends Controller
         // $user->getAvatar(); // 头像网址
         // $user->getOriginal(); // 原始API返回的结果
         // $user->getToken(); // access_token， 比如用于地址共享时使用
-
-        //TODO 需要更新的部分,也有可能用REDIS来更新,我们单独的逻辑
-
-        //缓存身份
-        setcookie('wechat_user',json_encode($user->toArray()),time()+3600*24);
-
-        //$targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
-        //header('location:'. $targetUrl); // 跳转到 user/profile
-        $route = isset($_COOKIE['route']) ?  $_COOKIE['route'] :'/';
-        //var_dump($route);
-        return $this->redirect([$route]);
     }
 
 

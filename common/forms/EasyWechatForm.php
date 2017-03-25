@@ -20,30 +20,6 @@ use EasyWeChat\Foundation\Application;
 class EasyWechatForm extends BaseForm
 {
 
-    /**
-     * 缓存并获取用户信息
-     */
-    public function cacheUserInfo(){
-        //todo
-        /*
-        $userModel=new \common\models\User();
-
-        if($id){
-            return User::findOne($id);
-        }
-
-        if(isset($_COOKIE['userId'])){
-            $userModel=\common\forms\UserForm::getUserById($_COOKIE['userId']);
-        }else if(isset($_GET['code'])){
-            $userModel=\common\sdk\WxClient::getUserByCode($_GET['code']);
-        }
-        if((!$userModel)||(!$userModel->id)){
-            return null;//"无法获取购买者信息,请从优趣公众号进入!";
-        }
-        return $userModel;
-        */
-    }
-
 
     /**
      * @param string $reqRoute
