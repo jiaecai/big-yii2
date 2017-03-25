@@ -18,23 +18,40 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "overtrue/wechat": "~3.1",
         "yiisoft/yii2-redis": "^2.0",
+        "yiisoft/yii2-httpclient": "*",
+
+        "overtrue/wechat": "~3.1",
+        "maxwen/yii2-easy-wechat": "^1.0",
+
         "flc/alidayu": "^2.0",
         "aliyuncs/oss-sdk-php": "^2.2",
-        "maxwen/yii2-easy-wechat": "^1.0",
-        "kartik-v/yii2-widgets": "*",
+
         "bower-asset/echarts": "*",
         "hisune/echarts-php": "*",
+
+        "kartik-v/yii2-widgets": "*",
         "kartik-v/yii2-grid": "*",
         "kartik-v/yii2-detail-view": "*",
         "kartik-v/yii2-tree-manager": "*",
         "kartik-v/yii2-export": "*",
         "kartik-v/yii2-mpdf": "*",
         "kartik-v/yii2-builder": "*",
+        "kartik-v/yii2-dynagrid": "*",
+        "kartik-v/yii2-dialog": "*",
+        "kartik-v/yii2-slider": "*",
+        "kartik-v/yii2-editable": "*",
+        "kartik-v/yii2-dropdown-x": "*",
+        "kartik-v/yii2-nav-x": "*",
+        "kartik-v/yii2-helpers": "*",
+
+        "yiidoc/yii2-redactor": "*",
+
+        "yii2tech/selfupdate": "*",
+        "yii2tech/crontab": "*",
+
         "samdark/yii2-webshell": "*",
-        "mdmsoft/yii2-admin": "*",
-        "kartik-v/yii2-dynagrid": "*"
+        "mdmsoft/yii2-admin": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

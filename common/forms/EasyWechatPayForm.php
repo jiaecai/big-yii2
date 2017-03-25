@@ -52,7 +52,7 @@ class EasyWechatPayForm extends BaseForm
                 return $prepayId;
                 //return $prepayId;
             }else{
-                var_dump($result);
+                var_dump($result);//TODO 后面注销
                 //die("出错了。");  // 出错就说出来，不然还能怎样？
             }
         }catch (\Exception $e){

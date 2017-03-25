@@ -128,23 +128,29 @@ class WxPayController extends Controller
      * 2、充值或支付确认
      */
     public function actionPayConfirm($wareId=null,$orderId=null,$rechargeAmount=0){
-        $userId="缓存的";
         //todo 带有订单和用户身份，等待用户下单，有下单按钮，点完后到达创建订单页面
+
+        $userArray = json_decode($_COOKIE['wechat_user'],true);
 
         $app = new Application(Yii::$app->params['WECHAT']);
         $payment = $app->payment;
+        $js = $app->js;
 
         $easyWechatPayForm = new EasyWechatPayForm();
-        $userArray = json_decode($_COOKIE['wechat_user'],true);
 
         $url="https://www.baidu.com";
         $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,$url,$userArray['id']);//蛋类商品下单
 
         //$json = $payment->configForPayment($prepayId);
+        if(!$prepayId){//支付失败
+            return $this->render('error', [
+                'name' => '微信支付错误',
+                'message' => '微信支付错误',
+            ]);
+        }
 
         $config = $payment->configForJSSDKPayment($prepayId);
         // 这个方法是取得js里支付所必须的参数用的。 没这个啥也做不了，除非你自己把js的参数生成一遍
-        $js = $app->js;
 
         return $this->render('pay_confirm', [
             'config' => $config,

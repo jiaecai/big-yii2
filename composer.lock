@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a775e47eeddac87d1366b2e03bcb4212",
+    "content-hash": "3c50c69b46f04be471b50c6d3f4decf7",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -344,16 +344,16 @@
         },
         {
             "name": "bower-asset/echarts",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecomfe/echarts.git",
-                "reference": "10692d9c36ee8fee505b6ecf77442019df5ad4a0"
+                "reference": "42ad1aa304718c6ba80547d8d2a0c6e9eaf3164b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecomfe/echarts/zipball/10692d9c36ee8fee505b6ecf77442019df5ad4a0",
-                "reference": "10692d9c36ee8fee505b6ecf77442019df5ad4a0",
+                "url": "https://api.github.com/repos/ecomfe/echarts/zipball/42ad1aa304718c6ba80547d8d2a0c6e9eaf3164b",
+                "reference": "42ad1aa304718c6ba80547d8d2a0c6e9eaf3164b",
                 "shasum": ""
             },
             "type": "bower-asset-library"
@@ -1034,16 +1034,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
                 "shasum": ""
             },
             "require": {
@@ -1095,7 +1095,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-27T10:51:17+00:00"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "hisune/echarts-php",
@@ -1194,6 +1194,55 @@
                 "upload"
             ],
             "time": "2017-02-21T06:45:16+00:00"
+        },
+        {
+            "name": "kartik-v/bootstrap-popover-x",
+            "version": "v1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/bootstrap-popover-x.git",
+                "reference": "a457ec2975da33dd578f228e3e83ed64963ca641"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-popover-x/zipball/a457ec2975da33dd578f228e3e83ed64963ca641",
+                "reference": "a457ec2975da33dd578f228e3e83ed64963ca641",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\plugins\\popover\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.",
+            "homepage": "https://github.com/kartik-v/bootstrap-popover-x",
+            "keywords": [
+                "bootstrap",
+                "extended",
+                "jquery",
+                "modal",
+                "modal-popover",
+                "popover",
+                "popover-x"
+            ],
+            "time": "2017-01-04T06:24:03+00:00"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -1441,6 +1490,53 @@
             "time": "2016-09-13T18:15:26+00:00"
         },
         {
+            "name": "kartik-v/yii2-dropdown-x",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-dropdown-x.git",
+                "reference": "4689a7635e290ef1b71eb4f0962e3b77e347b6fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-dropdown-x/zipball/4689a7635e290ef1b71eb4f0962e3b77e347b6fe",
+                "reference": "4689a7635e290ef1b71eb4f0962e3b77e347b6fe",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-krajee-base": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\dropdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An extended bootstrap dropdown widget for Yii 2 with submenu drilldown.",
+            "homepage": "https://github.com/kartik-v/yii2-dropdown-x",
+            "keywords": [
+                "Context",
+                "click",
+                "extension",
+                "menu",
+                "mouse",
+                "widget",
+                "yii2"
+            ],
+            "time": "2014-12-08T04:31:32+00:00"
+        },
+        {
             "name": "kartik-v/yii2-dynagrid",
             "version": "v1.4.4",
             "source": {
@@ -1494,6 +1590,59 @@
                 "yii2"
             ],
             "time": "2015-08-04T15:22:13+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-editable",
+            "version": "v1.7.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-editable.git",
+                "reference": "489d2772f92f0da434edff1916c6e5a52bf8546d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-editable/zipball/489d2772f92f0da434edff1916c6e5a52bf8546d",
+                "reference": "489d2772f92f0da434edff1916c6e5a52bf8546d",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-krajee-base": "~1.7",
+                "kartik-v/yii2-popover-x": "~1.3"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "kartik\\editable\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An enhanced editable widget for Yii 2.0 that allows easy editing of displayed data with numerous configuration possibilities.",
+            "homepage": "https://github.com/kartik-v/yii2-editable",
+            "keywords": [
+                "bootstrap",
+                "editable",
+                "input",
+                "jquery",
+                "popover",
+                "popover-x",
+                "widget"
+            ],
+            "time": "2017-01-08T07:09:14+00:00"
         },
         {
             "name": "kartik-v/yii2-export",
@@ -1757,6 +1906,148 @@
                 "yii2"
             ],
             "time": "2017-01-14T11:51:12+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-nav-x",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-nav-x.git",
+                "reference": "b4b03037131d9a8b29791984b80bf062bdb814e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-nav-x/zipball/b4b03037131d9a8b29791984b80bf062bdb814e3",
+                "reference": "b4b03037131d9a8b29791984b80bf062bdb814e3",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-dropdown-x": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\nav\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An extended bootstrap Nav widget for Yii 2 with submenu drilldown.",
+            "homepage": "https://github.com/kartik-v/yii2-nav-x",
+            "keywords": [
+                "Context",
+                "click",
+                "extension",
+                "menu",
+                "mouse",
+                "widget",
+                "yii2"
+            ],
+            "time": "2014-12-06T18:38:52+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-popover-x",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-popover-x.git",
+                "reference": "38f2208cf92f8c4a7758f485575a881cade1970c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-popover-x/zipball/38f2208cf92f8c4a7758f485575a881cade1970c",
+                "reference": "38f2208cf92f8c4a7758f485575a881cade1970c",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/bootstrap-popover-x": "~1.4",
+                "kartik-v/yii2-krajee-base": "~1.7"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\popover\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An extended bootstrap 3.0 popover widget which combines both the bootstrap popover and modal features and includes various new styling enhancements.",
+            "homepage": "https://github.com/kartik-v/yii2-popover-x",
+            "keywords": [
+                "bootstrap",
+                "extended",
+                "jquery",
+                "modal",
+                "modal-popover",
+                "popover",
+                "popover-x"
+            ],
+            "time": "2016-01-12T16:59:09+00:00"
+        },
+        {
+            "name": "kartik-v/yii2-slider",
+            "version": "v1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kartik-v/yii2-slider.git",
+                "reference": "81a2463294fa88a58d0ed8214254c8a6b63b7e89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-slider/zipball/81a2463294fa88a58d0ed8214254c8a6b63b7e89",
+                "reference": "81a2463294fa88a58d0ed8214254c8a6b63b7e89",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-krajee-base": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "kartik\\slider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kartik Visweswaran",
+                    "email": "kartikv2@gmail.com",
+                    "homepage": "http://www.krajee.com/"
+                }
+            ],
+            "description": "An advanced slider input for Yii Framework 2 for both touch enabled and desktop devices based on bootstrap-slider.",
+            "homepage": "https://github.com/kartik-v/yii2-slider",
+            "keywords": [
+                "bootstrap",
+                "bootstrap 3",
+                "extension",
+                "range",
+                "slider",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-01-10T17:24:24+00:00"
         },
         {
             "name": "kartik-v/yii2-sortable",
@@ -3739,6 +4030,149 @@
             "time": "2016-09-14T18:37:20+00:00"
         },
         {
+            "name": "yii2tech/crontab",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2tech/crontab.git",
+                "reference": "3ae48273adadb491facb514ef1ba596dcada0f85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2tech/crontab/zipball/3ae48273adadb491facb514ef1ba596dcada0f85",
+                "reference": "3ae48273adadb491facb514ef1ba596dcada0f85",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii2tech\\crontab\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "Crontab support extension for the Yii2 framework",
+            "keywords": [
+                "cron",
+                "cronjob",
+                "crontab",
+                "yii2"
+            ],
+            "time": "2016-04-25T07:47:27+00:00"
+        },
+        {
+            "name": "yii2tech/selfupdate",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yii2tech/selfupdate.git",
+                "reference": "02cb8725a9665c39fbce8ea09c28cd4d3fbb75ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yii2tech/selfupdate/zipball/02cb8725a9665c39fbce8ea09c28cd4d3fbb75ae",
+                "reference": "02cb8725a9665c39fbce8ea09c28cd4d3fbb75ae",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii2tech\\selfupdate\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "Basic extension for the Yii2 project self-update from VCS",
+            "keywords": [
+                "continuous",
+                "deployment",
+                "git",
+                "integration",
+                "mercurial",
+                "selfupdate",
+                "update",
+                "vcs",
+                "yii2"
+            ],
+            "time": "2016-12-08T14:23:19+00:00"
+        },
+        {
+            "name": "yiidoc/yii2-redactor",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiidoc/yii2-redactor.git",
+                "reference": "c4c80c19c68728e88d135f4eec5c51352fbbaa37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiidoc/yii2-redactor/zipball/c4c80c19c68728e88d135f4eec5c51352fbbaa37",
+                "reference": "c4c80c19c68728e88d135f4eec5c51352fbbaa37",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yii\\redactor\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nghia Nguyen",
+                    "email": "zinzinday@gmail.com"
+                }
+            ],
+            "description": "Extension redactor for Yii2 Framework.",
+            "keywords": [
+                "Redactor",
+                "extension",
+                "html editor",
+                "imperavi",
+                "wysiwyg",
+                "yii2"
+            ],
+            "time": "2015-06-02T21:47:24+00:00"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "2.0.11.2",
             "source": {
@@ -3937,6 +4371,53 @@
                 "yii2"
             ],
             "time": "2016-12-20T13:26:02+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "113e4e361730f62c1bf50fbd6f09898776d404b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/113e4e361730f62c1bf50fbd6f09898776d404b1",
+                "reference": "113e4e361730f62c1bf50fbd6f09898776d404b1",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2017-02-15T14:28:10+00:00"
         },
         {
             "name": "yiisoft/yii2-redis",
@@ -4892,16 +5373,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.16",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "dafc78e2a7d12139b0e97078d1082326bd09363d"
+                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/dafc78e2a7d12139b0e97078d1082326bd09363d",
-                "reference": "dafc78e2a7d12139b0e97078d1082326bd09363d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/68752b665d3875f9a38a357e3ecb35c79f8673bf",
+                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf",
                 "shasum": ""
             },
             "require": {
@@ -4970,7 +5451,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-15T13:02:34+00:00"
+            "time": "2017-03-19T16:52:12+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
