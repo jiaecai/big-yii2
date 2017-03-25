@@ -17,9 +17,12 @@ use \EasyWeChat\Message\News;
 class WxController extends Controller
 {
 
+    public $enableCsrfValidation = false;
+
     /**
      * @inheritdoc
      */
+    /*
     public function actions()
     {
         return [
@@ -32,6 +35,7 @@ class WxController extends Controller
             ],
         ];
     }
+    */
 
 
     /**
