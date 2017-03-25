@@ -27,6 +27,7 @@
         "flc/alidayu": "^2.0",
         "aliyuncs/oss-sdk-php": "^2.2",
 
+        "bower-asset/jquery.terminal": "*",
         "bower-asset/echarts": "*",
         "hisune/echarts-php": "*",
 
