@@ -35,19 +35,7 @@ class WxController extends Controller
 
 
     /**
-     * 服务器验证
-     * 无需页面
-     */
-    public function actionServVali(){
-        $app = new Application(Yii::$app->params['WECHAT']);
-        $response = $app->server->serve();//执行服务端业务
-        // 将响应输出
-        $response->send(); // Laravel 里请使用：return $response;
-    }
-
-
-    /**
-     * 用户消息处理
+     * 用户消息处理 包含了服务器验证
      * 总入口
      */
     public function actionHandle(){
