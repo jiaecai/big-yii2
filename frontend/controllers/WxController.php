@@ -27,7 +27,7 @@ class WxController extends Controller
         $app = new Application(Yii::$app->params['WECHAT']);
         $server = $app->server;
         $user   = $app->user;
-        $message = $server->getMessage();
+        //$message = $server->getMessage();
         //echo $user['nickname'];
         //修改用户备注
         //$user->remark($openId, $remark); // 成功返回boolean
