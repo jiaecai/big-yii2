@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="">
+    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="update">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/controllers/WxController.php" afterPath="$PROJECT_DIR$/console/controllers/WxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environments/dev/common/config/main-local.php" afterPath="$PROJECT_DIR$/environments/dev/common/config/main-local.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php" afterPath="$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +43,8 @@
       <file leaf-file-name="pay_confirm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="375">
+              <caret line="25" column="108" lean-forward="false" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -727,14 +725,7 @@
       <workItem from="1490418095228" duration="16000" />
       <workItem from="1490418283659" duration="112000" />
       <workItem from="1490418419121" duration="29980000" />
-      <workItem from="1490712575088" duration="1053000" />
-    </task>
-    <task id="LOCAL-00017" summary="update">
-      <created>1490364478457</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1490364478457</updated>
+      <workItem from="1490712575088" duration="1201000" />
     </task>
     <task id="LOCAL-00018" summary="update">
       <created>1490364583925</created>
@@ -1072,11 +1063,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490540281683</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="update">
+      <created>1490715654961</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1490715654961</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98650000" />
+    <option name="totallyTimeSpent" value="98798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1310,6 +1308,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="51" column="88" lean-forward="false" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
+          <folding>
+            <element signature="e#31#39#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1478,8 +1479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        <state relative-caret-position="375">
+          <caret line="25" column="108" lean-forward="false" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
           <folding />
         </state>
       </provider>

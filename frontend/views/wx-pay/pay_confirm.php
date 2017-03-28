@@ -15,7 +15,7 @@ $this->title = '支付确认';
         <div>
             <?=$wareId;?>
             <div>
-                <input name="button" id="btnPay" type="button" value="确认支付" />
+                <input name="btnPay" id="btnPay" type="button" value="确认支付" />
             </div>
         </div>
 
@@ -24,10 +24,8 @@ $this->title = '支付确认';
 
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-    wx.config(<?= $js->config(array('chooseWXPay'))?>);
-</script>
 <script>
+    wx.config(<?= $js->config(array('chooseWXPay'))?>);
     $(function(){
         $(".btnPay").click(function(){
             alert("a");
