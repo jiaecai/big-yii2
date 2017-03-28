@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="update">
+    <list default="true" id="ad92f109-ee43-494e-a91d-34334058024a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php" afterPath="$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php" />
     </list>
@@ -43,8 +43,8 @@
       <file leaf-file-name="pay_confirm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="108" lean-forward="false" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
+            <state relative-caret-position="315">
+              <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -725,14 +725,7 @@
       <workItem from="1490418095228" duration="16000" />
       <workItem from="1490418283659" duration="112000" />
       <workItem from="1490418419121" duration="29980000" />
-      <workItem from="1490712575088" duration="1201000" />
-    </task>
-    <task id="LOCAL-00018" summary="update">
-      <created>1490364583925</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1490364583925</updated>
+      <workItem from="1490712575088" duration="1288000" />
     </task>
     <task id="LOCAL-00019" summary="update">
       <created>1490365027200</created>
@@ -1070,11 +1063,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490715654961</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update">
+      <created>1490715797321</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1490715797321</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98798000" />
+    <option name="totallyTimeSpent" value="98885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1479,8 +1479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/wx-pay/pay_confirm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="108" lean-forward="false" selection-start-line="25" selection-start-column="108" selection-end-line="25" selection-end-column="108" />
+        <state relative-caret-position="315">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
         </state>
       </provider>
