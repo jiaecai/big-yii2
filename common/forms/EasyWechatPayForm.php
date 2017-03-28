@@ -32,7 +32,7 @@ class EasyWechatPayForm extends BaseForm
             'body'             => 'iPad mini 16G 白色',
             'detail'           => 'iPad mini 16G 白色',
             'out_trade_no'     => '1217752501201407033233368018',
-            'total_fee'        => 5388, // 单位：分
+            'total_fee'        => 1, // 单位：分
             //通知url必须为直接可访问的url，不能携带参数。示例：
             'notify_url'       => $notifyUrl,//'http://xxx.com/order-notify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'openid'           => $openId, // trade_type=JSAPI，此参数必传，用户在商户appid下的唯一标识，
