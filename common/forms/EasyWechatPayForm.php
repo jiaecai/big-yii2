@@ -49,6 +49,7 @@ class EasyWechatPayForm extends BaseForm
 
             if ($result->return_code == 'SUCCESS' && $result->result_code == 'SUCCESS'){
                 $prepayId = $result->prepay_id;
+                //TODO 如果创建成功，下一次访问时，
                 return $prepayId;
                 //return $prepayId;
             }else{
