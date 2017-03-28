@@ -138,7 +138,7 @@ class WxPayController extends Controller
 
         $easyWechatPayForm = new EasyWechatPayForm();
 
-        $url="https://www.baidu.com";
+        $url=Yii::$app->urlManager->createAbsoluteUrl(['wx-pay/pay-callback']);
         $prepayId=$easyWechatPayForm->createSingleWareOrder($wareId,$url,$userArray['id']);//蛋类商品下单
 
         //$json = $payment->configForPayment($prepayId);
