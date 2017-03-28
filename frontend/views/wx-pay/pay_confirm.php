@@ -25,7 +25,9 @@ $this->title = '支付确认';
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    alert("here1");
     wx.config(<?= $js->config(array('chooseWXPay'))?>);
+    alert("here2");
     $(function(){
         $("#btnPay").click(function(){
             alert("a");
