@@ -4,24 +4,6 @@
 
 $this->title = '支付确认';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>支付确认!</h1>
-    </div>
-
-    <div class="body-content">
-
-        <div>
-            <?=$wareId;?>
-            <div>
-                <button id="btnWXPay" >微信支付</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 <script>
@@ -54,4 +36,25 @@ $this->title = '支付确认';
         });
     });
 </script>
+
+<div class="site-index">
+
+    <div class="jumbotron">
+        <h1>支付确认!</h1>
+    </div>
+
+    <div class="body-content">
+
+        <div>
+            <?=$wareId;?>
+            <div>
+                <button id="btnWXPay" >微信支付</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
 
