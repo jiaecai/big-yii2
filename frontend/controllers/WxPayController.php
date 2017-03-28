@@ -165,7 +165,8 @@ class WxPayController extends Controller
      */
     public function actionPayCallback(){
         $app = new Application(Yii::$app->params['WECHAT']);
-        $response = $app->payment->handleNotify(function($notify, $successful){
+        $result=array();
+        $response = $app->payment->handleNotify(function($notify, $successful) use ($result){
             // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
             /*
             $order = 查询订单($notify->out_trade_no);
@@ -178,20 +179,34 @@ class WxPayController extends Controller
                 return true; // 已经支付成功了就不再更新了
             }
             */
+            $result="a";
             // 用户是否支付成功
             if ($successful) {
                 // 不是已经支付状态则修改为已经支付状态
-                $order->paid_at = time(); // 更新支付时间为当前时间
-                $order->status = 'paid';
+                //$order->paid_at = time(); // 更新支付时间为当前时间
+                //$order->status = 'paid';
+                $result="支付成功！";
+
             } else { // 用户支付失败
-                $order->status = 'paid_fail';
+                //$order->status = 'paid_fail';
+                $result="支付成功！";
             }
-            $order->save(); // 保存订单
+            $result="a";
+
+            //$order->save(); // 保存订单
 
             return true; // 或者错误消息，这里表示是否处理完成
         });
         $response->send(); // Laravel 里请使用：return $response;
-        return $response;
+        /*
+        return $this->render('pay_result', [
+            'result'=>$result
+            //'config' => $config,
+            //'js' => $js,
+            //'wareId' => $wareId,
+        ]);
+        */
+        //return $response;
     }
 
 

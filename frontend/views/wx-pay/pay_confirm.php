@@ -15,7 +15,7 @@ $this->title = '支付确认';
         <div>
             <?=$wareId;?>
             <div>
-                <input name="btnPay" id="btnPay" type="button" value="确认支付" />
+                <button id="btnWXPay" >微信支付</button>
             </div>
         </div>
 
@@ -25,11 +25,11 @@ $this->title = '支付确认';
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    alert("here1");
+    //alert("here1");
     wx.config(<?= $js->config(array('chooseWXPay'))?>);
-    alert("here2");
+    //alert("here2");
     $(function(){
-        $("#btnPay").click(function(){
+        $("#btnWXPay").click(function(){
             alert("a");
             wx.chooseWXPay({
                 timestamp: "<?=$config['timestamp']?>", // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
