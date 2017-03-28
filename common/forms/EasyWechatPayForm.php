@@ -31,7 +31,7 @@ class EasyWechatPayForm extends BaseForm
             'trade_type'       => 'JSAPI', // JSAPI，NATIVE，APP...
             'body'             => 'iPad mini 16G 白色',
             'detail'           => 'iPad mini 16G 白色',
-            'out_trade_no'     => '1217752501201407033233368018',
+            'out_trade_no'     => '1217752501201407033233368019',//注意，有可能出现商户订单号重复的情况，要自己把控，唯一
             'total_fee'        => 1, // 单位：分
             //通知url必须为直接可访问的url，不能携带参数。示例：
             'notify_url'       => $notifyUrl,//'http://xxx.com/order-notify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
@@ -52,11 +52,11 @@ class EasyWechatPayForm extends BaseForm
                 return $prepayId;
                 //return $prepayId;
             }else{
-                var_dump($result);//TODO 后面注销
+                //var_dump($result);//TODO 后面注销
                 //die("出错了。");  // 出错就说出来，不然还能怎样？
             }
         }catch (\Exception $e){
-            var_dump($e);
+            //var_dump($e);
         }
         return null;
     }
