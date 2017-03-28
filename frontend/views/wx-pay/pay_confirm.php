@@ -19,18 +19,11 @@ $this->title = '支付确认';
             // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
             paySign: '<?=$config['paySign']?>',
             // 支付签名
-            success: function (res) {
-                // 支付成功后的回调函数
-                if(res.err_msg == "get_brand_wcpay_request：ok" ) {
-                    alert('支付成功。');
-                    //window.location.href="<?//=url("wechat/pay_ok")?>";
-                }else{
-                    alert(res.errMsg);
-                    alert("支付失败，请返回重试。");
-                }
+            success: function (res) {// 支付成功后的回调函数
+                alert('支付成功。');
             },
             fail: function (res) {
-                alert("支付失败，请返回重试。");
+                alert("支付失败，请返回重试。");//怎么感觉也到这里了
             }
         });
     }
